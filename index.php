@@ -1,3 +1,4 @@
 <?
+// Outro comentario
 echo 'index';
 ?>
