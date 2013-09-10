@@ -1,0 +1,33 @@
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\DesktopView.exe.config
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\DesktopView.exe
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\DesktopView.pdb
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\DesktopView.csprojResolveAssemblyReference.cache
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\DesktopView.Properties.Resources.resources
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\DesktopView.csproj.GenerateResource.Cache
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\DesktopView.exe
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\DesktopView.pdb
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\BLL.dll
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\DAL_MYSQL.dll
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\Types.dll
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\BLL.pdb
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\DAL_MYSQL.pdb
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\bin\Debug\Types.pdb
+c:\Users\rodrigo\documents\visual studio 2012\Projects\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.formCadastrarEmpresario.resources
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\DesktopView.exe.config
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.exe
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.pdb
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\DesktopView.exe
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\DesktopView.pdb
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\BLL.dll
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\DAL_MYSQL.dll
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\Types.dll
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\BLL.pdb
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\DAL_MYSQL.pdb
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\bin\Debug\Types.pdb
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.csprojResolveAssemblyReference.cache
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.formCadastrarEmpresario.resources
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.Properties.Resources.resources
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.csproj.GenerateResource.Cache
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Menu.resources
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Departamento.resources
+C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Cargo.resources
