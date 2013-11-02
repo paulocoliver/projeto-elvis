@@ -12,3 +12,10 @@ C:\Users\rodrigo\Desktop\Trabalho\DAL_MYSQL\bin\Debug\Types.pdb
 C:\Users\rodrigo\Desktop\Trabalho\DAL_MYSQL\obj\Debug\DAL_MYSQL.csprojResolveAssemblyReference.cache
 C:\Users\rodrigo\Desktop\Trabalho\DAL_MYSQL\obj\Debug\DAL_MYSQL.dll
 C:\Users\rodrigo\Desktop\Trabalho\DAL_MYSQL\obj\Debug\DAL_MYSQL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\bin\Debug\DAL_MYSQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\bin\Debug\DAL_MYSQL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\bin\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\bin\Debug\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\obj\Debug\DAL_MYSQL.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\obj\Debug\DAL_MYSQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_MYSQL\obj\Debug\DAL_MYSQL.pdb

@@ -31,3 +31,24 @@ C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\DesktopView.csproj.Gener
 C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Menu.resources
 C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Departamento.resources
 C:\Users\rodrigo\Desktop\Trabalho\DesktopView\obj\Debug\Trabalho.DesktopView.Cargo.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\DesktopView.exe.config
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\DesktopView.exe
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\DesktopView.pdb
+C:\Users\Univem\Desktop\projeto-elvis\DesktopView\bin\Debug\DesktopView.exe.config
+C:\Users\Univem\Desktop\projeto-elvis\DesktopView\obj\Debug\DesktopView.exe
+C:\Users\Univem\Desktop\projeto-elvis\DesktopView\obj\Debug\DesktopView.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\DesktopView.exe
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\DesktopView.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\BLL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\DAL_MYSQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\BLL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\DAL_MYSQL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\bin\Debug\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\DesktopView.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\Trabalho.DesktopView.Cargo.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\Trabalho.DesktopView.Departamento.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\Trabalho.DesktopView.formCadastrarEmpresario.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\Trabalho.DesktopView.Menu.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\DesktopView.Properties.Resources.resources
+D:\Meus Documentos\Hosts\projeto-elvis\DesktopView\obj\Debug\DesktopView.csproj.GenerateResource.Cache

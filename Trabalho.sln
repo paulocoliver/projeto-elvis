@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Types", "Types\Types.csproj", "{DCEC8539-45BF-412D-BE13-4D9722178C9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_MYSQL", "DAL_MYSQL\DAL_MYSQL.csproj", "{5A2FC878-206C-4059-B6D1-8F07F2596DE8}"
@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{3EDB581F-B36D-446D-913A-8017ECACA791}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopView", "DesktopView\DesktopView.csproj", "{5496A7DD-C667-4A6E-990E-9747E86CAC3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_SQL", "DAL_SQL\DAL_SQL.csproj", "{566CECEC-3F1A-477F-9D88-50F7E1C722F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebView", "WebViewNovo\WebView.csproj", "{0B089029-CFA3-41AC-95E1-B36E0F0DA29C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{5496A7DD-C667-4A6E-990E-9747E86CAC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5496A7DD-C667-4A6E-990E-9747E86CAC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5496A7DD-C667-4A6E-990E-9747E86CAC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566CECEC-3F1A-477F-9D88-50F7E1C722F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566CECEC-3F1A-477F-9D88-50F7E1C722F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566CECEC-3F1A-477F-9D88-50F7E1C722F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566CECEC-3F1A-477F-9D88-50F7E1C722F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B089029-CFA3-41AC-95E1-B36E0F0DA29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B089029-CFA3-41AC-95E1-B36E0F0DA29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B089029-CFA3-41AC-95E1-B36E0F0DA29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B089029-CFA3-41AC-95E1-B36E0F0DA29C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

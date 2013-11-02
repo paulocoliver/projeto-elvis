@@ -16,3 +16,12 @@ C:\Users\rodrigo\Desktop\Trabalho\BLL\bin\Debug\Types.pdb
 C:\Users\rodrigo\Desktop\Trabalho\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\rodrigo\Desktop\Trabalho\BLL\obj\Debug\BLL.dll
 C:\Users\rodrigo\Desktop\Trabalho\BLL\obj\Debug\BLL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\obj\Debug\BLL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\obj\Debug\BLL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\BLL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\BLL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\DAL_MYSQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\DAL_MYSQL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\BLL\bin\Debug\Types.pdb

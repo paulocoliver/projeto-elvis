@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Trabalho.WebView.Assoc.Layout.Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="/Assoc/Css/Layout.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="Header" class="degrade">
+            <div id="Header-center">
+                <div id="link-login">
+                    <img alt="" title="" src="/Assoc/Img/ico_log.png" id="IconLogin" />            
+                    <asp:HyperLink ID="HyperLink3" runat="server">Cadastrar-se / Logar</asp:HyperLink>                   
+                </div>
+            </div>
+        </div>
+
+        <div id="Menu" class="degrade">
+            <div id="Menu-center">
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="item-menu">Home</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="item-menu">Eventos</asp:HyperLink>
+            </div>
+        </div>
+
+        <div id="Content">
+            <div id="Content-center">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+ 
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div id="Footer" class="degrade">
+            <div id="Footer-center"></div>
+        </div>
+    </form>
+</body>
+</html>

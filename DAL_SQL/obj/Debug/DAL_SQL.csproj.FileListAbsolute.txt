@@ -1,0 +1,7 @@
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\bin\Debug\DAL_SQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\bin\Debug\DAL_SQL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\bin\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\bin\Debug\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\obj\Debug\DAL_SQL.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\obj\Debug\DAL_SQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\DAL_SQL\obj\Debug\DAL_SQL.pdb

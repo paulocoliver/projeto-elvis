@@ -1,0 +1,5 @@
+D:\Meus Documentos\Hosts\projeto-elvis\WebViewNovo\obj\Debug\WebView.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\WebViewNovo\bin\WebView.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebViewNovo\bin\WebView.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\WebViewNovo\obj\Debug\WebView.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebViewNovo\obj\Debug\WebView.pdb

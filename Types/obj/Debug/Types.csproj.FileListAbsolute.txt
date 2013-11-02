@@ -8,3 +8,8 @@ C:\Users\rodrigo\Desktop\Trabalho\Types\bin\Debug\Types.pdb
 C:\Users\rodrigo\Desktop\Trabalho\Types\obj\Debug\Types.csprojResolveAssemblyReference.cache
 C:\Users\rodrigo\Desktop\Trabalho\Types\obj\Debug\Types.dll
 C:\Users\rodrigo\Desktop\Trabalho\Types\obj\Debug\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\Types\bin\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\Types\bin\Debug\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\Types\obj\Debug\Types.csprojResolveAssemblyReference.cache
+D:\Meus Documentos\Hosts\projeto-elvis\Types\obj\Debug\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\Types\obj\Debug\Types.pdb
