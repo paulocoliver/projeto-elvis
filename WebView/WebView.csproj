@@ -57,9 +57,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assoc\Cadastrar.aspx" />
+    <Content Include="Assoc\Css\Cadastro.css" />
     <Content Include="Assoc\Css\Layout.css" />
     <Content Include="Assoc\Default.aspx" />
     <Content Include="Assoc\Img\ico_log.png" />
+    <Compile Include="Assoc\Cadastrar.aspx.cs">
+      <DependentUpon>Cadastrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assoc\Cadastrar.aspx.designer.cs">
+      <DependentUpon>Cadastrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Assoc\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

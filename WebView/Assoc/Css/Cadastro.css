@@ -1,0 +1,32 @@
+﻿#form-cadastro {
+    padding: 20px;
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+    height:500px;
+}
+#form-cadastro span, #form-cadastro input {
+    display:inline-block;
+    vertical-align:middle;
+    margin-bottom:10px;
+    height:27px;
+    line-height:27px;
+}
+#form-cadastro span {
+    width:90px;
+}
+#form-cadastro input {
+    width:600px;
+}
+#ContentPlaceHolder1_lbEstado,#ContentPlaceHolder1_lbCidade {
+    width:60px !important;
+    margin-left:10px;
+}
+#txtPais, #txtEstado, #txtCidade {
+    width:145px !important;
+}
+#form-cadastro input[type="submit"] {
+    position: absolute;
+    right: 20px;
+    width: 100px !important;
+}
