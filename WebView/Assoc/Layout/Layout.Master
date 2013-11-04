@@ -4,8 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title></title>
+    <title> Faça Parte </title>
+
     <link href="/Assoc/Css/Layout.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/Js/jQuery-1.9.1.js"></script>
+    <script type="text/javascript" src="/Js/jQuery-ui.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -23,8 +28,8 @@
 
         <div id="Menu" class="degrade">
             <div id="Menu-center">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="item-menu">Home</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="item-menu">Eventos</asp:HyperLink>
+                <asp:HyperLink ID="linkHome" runat="server" CssClass="item-menu" NavigateUrl="/assoc/default.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="linkEventos" runat="server" CssClass="item-menu" NavigateUrl="/assoc/eventos.aspx">Eventos</asp:HyperLink>
             </div>
         </div>
 

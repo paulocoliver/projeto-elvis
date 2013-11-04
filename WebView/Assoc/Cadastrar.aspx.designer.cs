@@ -7,28 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebView.Assoc {
+namespace Trabalho.WebView.Assoc {
     
     
     public partial class Cadastrar {
-        
-        /// <summary>
-        /// lbRazaoSocial control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbRazaoSocial;
-        
-        /// <summary>
-        /// lbNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNome;
         
         /// <summary>
         /// lbEmail control.
@@ -40,6 +22,69 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbEmail;
         
         /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// lbSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbSenha;
+        
+        /// <summary>
+        /// txtSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        
+        /// <summary>
+        /// lbRazaoSocial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbRazaoSocial;
+        
+        /// <summary>
+        /// txtRazaoSocial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRazaoSocial;
+        
+        /// <summary>
+        /// lbNome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbNome;
+        
+        /// <summary>
+        /// txtNome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        
+        /// <summary>
         /// lbCNPJ control.
         /// </summary>
         /// <remarks>
@@ -47,6 +92,15 @@ namespace WebView.Assoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbCNPJ;
+        
+        /// <summary>
+        /// txtCNPJ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCNPJ;
         
         /// <summary>
         /// lbIE control.
@@ -58,6 +112,15 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbIE;
         
         /// <summary>
+        /// txtIE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIE;
+        
+        /// <summary>
         /// lbCEP control.
         /// </summary>
         /// <remarks>
@@ -65,6 +128,15 @@ namespace WebView.Assoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbCEP;
+        
+        /// <summary>
+        /// txtCEP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCEP;
         
         /// <summary>
         /// lbPais control.
@@ -76,6 +148,15 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbPais;
         
         /// <summary>
+        /// selectPais control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList selectPais;
+        
+        /// <summary>
         /// lbEstado control.
         /// </summary>
         /// <remarks>
@@ -83,6 +164,15 @@ namespace WebView.Assoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbEstado;
+        
+        /// <summary>
+        /// txtEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
         
         /// <summary>
         /// lbCidade control.
@@ -94,6 +184,15 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbCidade;
         
         /// <summary>
+        /// txtCidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCidade;
+        
+        /// <summary>
         /// lbEndereco control.
         /// </summary>
         /// <remarks>
@@ -101,6 +200,15 @@ namespace WebView.Assoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbEndereco;
+        
+        /// <summary>
+        /// txtEndereco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEndereco;
         
         /// <summary>
         /// lbComplemento control.
@@ -112,6 +220,15 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbComplemento;
         
         /// <summary>
+        /// txtComplemento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComplemento;
+        
+        /// <summary>
         /// lbSite control.
         /// </summary>
         /// <remarks>
@@ -121,6 +238,15 @@ namespace WebView.Assoc {
         protected global::System.Web.UI.WebControls.Label lbSite;
         
         /// <summary>
+        /// txtSite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSite;
+        
+        /// <summary>
         /// lbLogo control.
         /// </summary>
         /// <remarks>
@@ -128,5 +254,14 @@ namespace WebView.Assoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbLogo;
+        
+        /// <summary>
+        /// Logo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload Logo;
     }
 }

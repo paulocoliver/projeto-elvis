@@ -8,3 +8,17 @@ D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\WebView.pdb
 D:\Meus Documentos\Hosts\projeto-elvis\WebView\obj\Debug\WebView.csprojResolveAssemblyReference.cache
 D:\Meus Documentos\Hosts\projeto-elvis\WebView\obj\Debug\WebView.dll
 D:\Meus Documentos\Hosts\projeto-elvis\WebView\obj\Debug\WebView.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\BLL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\Newtonsoft.Json.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Net.Http.Formatting.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Web.Http.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Web.Http.WebHost.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\Types.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\DAL_MYSQL.dll
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\BLL.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\Types.pdb
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\Newtonsoft.Json.xml
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Net.Http.Formatting.xml
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Web.Http.xml
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\System.Web.Http.WebHost.xml
+D:\Meus Documentos\Hosts\projeto-elvis\WebView\bin\DAL_MYSQL.pdb

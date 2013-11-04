@@ -44,6 +44,7 @@
     <Compile Include="CidadeType.cs" />
     <Compile Include="DepartamentoType.cs" />
     <Compile Include="EmpresarioType.cs" />
+    <Compile Include="EmpresaType.cs" />
     <Compile Include="EstadoType.cs" />
     <Compile Include="PaisType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

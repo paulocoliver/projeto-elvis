@@ -48,6 +48,7 @@
     <Compile Include="CidadeDAL.cs" />
     <Compile Include="Dados.cs" />
     <Compile Include="DepartamentoDAL.cs" />
+    <Compile Include="EmpresaDAL.cs" />
     <Compile Include="EmpresarioDAL.cs" />
     <Compile Include="EstadoDAL.cs" />
     <Compile Include="PaisDAL.cs" />

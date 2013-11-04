@@ -109,10 +109,6 @@
       <Project>{3edb581f-b36d-446d-913a-8017ecaca791}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL_MYSQL\DAL_MYSQL.csproj">
-      <Project>{5a2fc878-206c-4059-b6d1-8f07f2596de8}</Project>
-      <Name>DAL_MYSQL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Types\Types.csproj">
       <Project>{dcec8539-45bf-412d-be13-4d9722178c9a}</Project>
       <Name>Types</Name>

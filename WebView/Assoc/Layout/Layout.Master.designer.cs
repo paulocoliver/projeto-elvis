@@ -49,22 +49,22 @@ namespace Trabalho.WebView.Assoc.Layout {
         protected global::System.Web.UI.WebControls.HyperLink linkCadastrar;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// linkHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink linkHome;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// linkEventos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.HyperLink linkEventos;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

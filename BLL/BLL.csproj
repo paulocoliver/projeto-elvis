@@ -43,6 +43,7 @@
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CidadeBLL.cs" />
     <Compile Include="DepartamentoBLL.cs" />
+    <Compile Include="EmpresaBLL.cs" />
     <Compile Include="EmpresarioBLL.cs" />
     <Compile Include="EstadoBLL.cs" />
     <Compile Include="PaisBLL.cs" />
