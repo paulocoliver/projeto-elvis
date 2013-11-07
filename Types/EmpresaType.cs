@@ -16,6 +16,7 @@ namespace Trabalho.Types
         private string _idAssociacao;
         private string _idCidade;
         private string _RazaoSocial;
+        private string _Senha;
         private string _Nome;
         private string _CNPJ;
         private string _IE;
@@ -38,6 +39,13 @@ namespace Trabalho.Types
             get { return _idAssociacao; }
             set { _idAssociacao = value; }
         }
+
+        public string Senha
+        {
+            get { return _Senha; }
+            set { _Senha = value; }
+        }
+
 
         public string IdCidade
         {

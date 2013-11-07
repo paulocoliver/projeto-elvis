@@ -12,13 +12,18 @@ namespace Trabalho.WebView.Assoc
 {
     public partial class Cadastrar : System.Web.UI.Page
     {
-        private int _id_associacao;
+        private string _id_associacao;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _id_associacao = "1";
             if (IsPostBack)
             {
-
+                if (save() )
+                {
+                    Response.Redirect("/Assoc/Default.aspx");
+                }
+                
             }else{
                 selectPaises();
             }
@@ -37,14 +42,26 @@ namespace Trabalho.WebView.Assoc
             selectPais.DataBind();
         }
 
-        public void save() {
+        public bool save() {
 
             EmpresaType empresa = new EmpresaType();
-            //empresa.IdAssociacao = _id_associacao;
-            
+            empresa.IdAssociacao = _id_associacao;
+            empresa.IdCidade = txtCidade.Text;
+            empresa.RazaoSocial = txtRazaoSocial.Text;
+            empresa.Senha = txtSenha.Text;
+            empresa.Nome = txtNome.Text;
+            empresa.CNPJ = txtCNPJ.Text;
+            empresa.IE = txtIE.Text;
+            empresa.CEP = txtCEP.Text;
+            empresa.Endereco = txtEndereco.Text;
+            empresa.Complemento = txtComplemento.Text;
+            empresa.Email = txtEmail.Text;
+            empresa.Site = txtSite.Text;
+
+            EmpresaBLL bll = new EmpresaBLL();
+            bll.insert(empresa);
+
+            return true;
         }
-
-        
-
     }
 }

@@ -10,6 +10,7 @@
 
     <script type="text/javascript" src="/Js/jQuery-1.9.1.js"></script>
     <script type="text/javascript" src="/Js/jQuery-ui.js"></script>
+    <script type="text/javascript" src="/Js/jQuery-mask.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

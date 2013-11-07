@@ -17,13 +17,14 @@ namespace Trabalho.DAL_MYSQL
                                  "id_associacao,"+
                                  "id_cidade,"+
                                  "razao_social,"+
-                                 "nome,"+
+                                 "nome_fantasia,"+
                                  "cnpj," +
                                  "ie," +
                                  "cep," +
                                  "endereco," +
                                  "complemento," +
                                  "email," +
+                                 "senha," +
                                  "site," +
                                  "logo" +
                             ") " +
@@ -39,6 +40,7 @@ namespace Trabalho.DAL_MYSQL
                                  "@endereco," +
                                  "@complemento," +
                                  "@email," +
+                                 "@senha," +
                                  "@site," +
                                  "@logo" +
                            ")";
@@ -49,11 +51,13 @@ namespace Trabalho.DAL_MYSQL
             cmd.Parameters.AddWithValue("@id_cidade", empresa.IdCidade);
             cmd.Parameters.AddWithValue("@razao_social", empresa.RazaoSocial);
             cmd.Parameters.AddWithValue("@nome", empresa.Nome);
+            cmd.Parameters.AddWithValue("@cnpj", empresa.CNPJ);
             cmd.Parameters.AddWithValue("@ie", empresa.IE);
             cmd.Parameters.AddWithValue("@cep", empresa.CEP);
             cmd.Parameters.AddWithValue("@endereco", empresa.Endereco);
             cmd.Parameters.AddWithValue("@complemento", empresa.Complemento);
             cmd.Parameters.AddWithValue("@email", empresa.Email);
+            cmd.Parameters.AddWithValue("@senha", empresa.Senha);
             cmd.Parameters.AddWithValue("@site", empresa.Site);
             cmd.Parameters.AddWithValue("@logo", empresa.Logo);
             try

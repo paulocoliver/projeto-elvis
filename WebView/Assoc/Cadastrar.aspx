@@ -13,7 +13,7 @@
     <div id="form-cadastro">
 
         <asp:Label ID="lbEmail" runat="server" Text="Email"></asp:Label>
-        <asp:TextBox ID="txtEmail" runat="server" required="required"></asp:TextBox>
+        <asp:TextBox ID="txtEmail" type="email" runat="server" required="required"></asp:TextBox>
         <br />
 
         <asp:Label ID="lbSenha" runat="server" Text="Senha"></asp:Label>
@@ -24,20 +24,21 @@
         <asp:TextBox ID="txtRazaoSocial" runat="server" required="required"></asp:TextBox>
         <br />
 
-        <asp:Label ID="lbNome" runat="server" Text="Nome"></asp:Label>
+        <asp:Label ID="lbNome" runat="server" Text="Nome Fantasia"></asp:Label>
         <asp:TextBox ID="txtNome" runat="server" required="required"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;
         <br />
 
         <asp:Label ID="lbCNPJ" runat="server" Text="CNPJ"></asp:Label>
-        <asp:TextBox ID="txtCNPJ" runat="server" required="required"></asp:TextBox>
+        <asp:TextBox ID="txtCNPJ" runat="server" pattern="[\w]{2}\.[\w]{2}\.[\w]{3}\/[\w]{4}-[\w]{2}" title="Formato: 11.11.111/1111-11" required="required"></asp:TextBox>
         <br />
 
         <asp:Label ID="lbIE" runat="server" Text="IE"></asp:Label>
-        <asp:TextBox ID="txtIE" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtIE" runat="server" pattern="[\w]{3}\.[\w]{3}\.[\w]{3}\.[\w]{3}"></asp:TextBox>
         <br />
 
         <asp:Label ID="lbCEP" runat="server" Text="CEP"></asp:Label>
-        <asp:TextBox ID="txtCEP" runat="server" required="required"></asp:TextBox>
+        <asp:TextBox ID="txtCEP" runat="server" pattern="[\w]{2}\.[\w]{3}-[\w]{3}" required="required"></asp:TextBox>
         <br />
 
         <asp:Label ID="lbPais" runat="server" Text="Pais"></asp:Label>

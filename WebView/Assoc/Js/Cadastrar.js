@@ -20,6 +20,10 @@ function cidadeFormatSelection(cidade) {
 
 $(document).ready(function () {
        
+    $("#ContentPlaceHolder1_txtCNPJ").mask("99.99.999/9999-99");
+    $("#ContentPlaceHolder1_txtIE").mask("999.999.999.999"); 
+    $("#ContentPlaceHolder1_txtCEP").mask("999.999.999.999");
+
     $("#ContentPlaceHolder1_selectPais").select2({
         placeHolder: "Selecione o Pais",
     }).on("select2-selecting", function (e) {
