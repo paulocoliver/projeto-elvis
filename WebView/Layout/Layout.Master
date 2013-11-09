@@ -29,7 +29,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="Empresas.aspx">Empresas cadastradas</a></li>
-                        <li><a href="#contact">Formulario empresa</a></li>
+                        <li><a href="Empresa/Questionario.aspx">Questionario empresa</a></li>
                     </ul>
                 </div>
             </div>

@@ -157,6 +157,7 @@
     <Content Include="Assoc\Js\select2\select2_locale_zh-TW.js" />
     <Content Include="Cadastro.aspx" />
     <Content Include="Css\Login.css" />
+    <Content Include="Empresa\Questionario.aspx" />
     <Content Include="Js\jQuery-ui.js" />
     <Content Include="Js\jQuery-1.9.1.js" />
     <Content Include="Css\Layout.css" />
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\Questionario.aspx.cs">
+      <DependentUpon>Questionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\Questionario.aspx.designer.cs">
+      <DependentUpon>Questionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Layout\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
