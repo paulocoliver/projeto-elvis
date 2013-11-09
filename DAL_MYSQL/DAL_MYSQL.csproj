@@ -47,6 +47,7 @@
     <Compile Include="BairroDAL.cs" />
     <Compile Include="CargoDAL.cs" />
     <Compile Include="CidadeDAL.cs" />
+    <Compile Include="AssociacaoDAL.cs" />
     <Compile Include="Dados.cs" />
     <Compile Include="DepartamentoDAL.cs" />
     <Compile Include="EmpresaDAL.cs" />

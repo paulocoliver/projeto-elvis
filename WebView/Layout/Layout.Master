@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/> 
     <link href="/Css/Layout.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -12,32 +13,37 @@
 
 <body>
     <form id="form1" runat="server">
-        <div id="Header" class="degrade">
-            <div id="Header-center">
-                <div id="link-login">
-                    <img alt="" title="" src="/Assoc/Img/ico_log.png" id="IconLogin" />            
-                    <asp:HyperLink ID="HyperLink3" runat="server">Cadastrar-se / Logar</asp:HyperLink>                   
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Admin Associação</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="Empresas.aspx">Empresas cadastradas</a></li>
+                        <li><a href="#contact">Formulario empresa</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div id="Menu" class="degrade">
-            <div id="Menu-center">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="item-menu">Home</asp:HyperLink>
-            </div>
-        </div>
 
-        <div id="Content">
-            <div id="Content-center">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
  
-                </asp:ContentPlaceHolder>
-            </div>
+            </asp:ContentPlaceHolder>
         </div>
 
-        <div id="Footer" class="degrade">
-            <div id="Footer-center"></div>
-        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     </form>
 </body>
 </html>

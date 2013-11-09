@@ -9,7 +9,7 @@ using Trabalho.Types;
 
 namespace Trabalho.WebView
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Cadastro : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,21 +19,24 @@ namespace Trabalho.WebView
         protected void BtnEntrar_Click(object sender, EventArgs e)
         {
             Types.AssociacaoType assoc = new Types.AssociacaoType();
+            assoc.Nome = txtNome.Text;
+            assoc.Url = txtUrl.Text;
             assoc.Usuario = txtUsuario.Text;
             assoc.Senha = txtSenha.Text;
 
             BLL.AssociacaoBLL assocBLL = new BLL.AssociacaoBLL();
-            assoc = assocBLL.login(assoc);
+            int id = assocBLL.insert(assoc);
 
-            if (assoc.IdAssociacao > 0)
+            if (id > 0)
             {
-                Session["AssociacaoID"] = assoc.IdAssociacao;
+                Session["AssociacaoID"] = id;
                 Response.Redirect("~/Default.aspx");
             }
             else
-            {               
-                Response.Write("<script>Javascript:alert('Acesso negado');</script>");
+            {
+                Response.Write("<script>Javascript:alert('Ocorreu um erro ao tentar cadastrar a associação');</script>");
             }
+            
         }
     }
 }

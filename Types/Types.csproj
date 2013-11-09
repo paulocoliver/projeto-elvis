@@ -42,6 +42,7 @@
     <Compile Include="BairroType.cs" />
     <Compile Include="CargoType.cs" />
     <Compile Include="CidadeType.cs" />
+    <Compile Include="AssociacaoType.cs" />
     <Compile Include="DepartamentoType.cs" />
     <Compile Include="EmpresarioType.cs" />
     <Compile Include="EmpresaType.cs" />

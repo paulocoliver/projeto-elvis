@@ -155,6 +155,8 @@
     <Content Include="Assoc\Js\select2\select2_locale_vi.js" />
     <Content Include="Assoc\Js\select2\select2_locale_zh-CN.js" />
     <Content Include="Assoc\Js\select2\select2_locale_zh-TW.js" />
+    <Content Include="Cadastro.aspx" />
+    <Content Include="Css\Login.css" />
     <Content Include="Js\jQuery-ui.js" />
     <Content Include="Js\jQuery-1.9.1.js" />
     <Content Include="Css\Layout.css" />
@@ -163,6 +165,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
