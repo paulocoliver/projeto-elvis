@@ -12,7 +12,7 @@ namespace Trabalho.DAL_MYSQL
         {
             get
             {
-                return "server=localhost;User Id=root;database=trabalho_db";
+                return "server=localhost;User Id=root;Password=root;database=trabalho_db";
             }
         }
     }
