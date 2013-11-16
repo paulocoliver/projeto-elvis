@@ -15,13 +15,29 @@ namespace Trabalho.BLL
             DAL = new QuestionarioDAL();
         }
 
+        public Types.QuestionarioType selectRecord(int id)
+        {
+            return DAL.selectRecord(id);
+        }
+
         public Types.QuestionariosType select()
         {
             return DAL.select();
         }
+
         public int insert(Types.QuestionarioType obj)
         {
             return DAL.insert(obj);
+        }
+
+        public void update(Types.QuestionarioType obj)
+        {
+            DAL.update(obj);
+        }
+
+        public void delete(Types.QuestionarioType obj)
+        {
+            DAL.delete(obj);
         }
     }
 }

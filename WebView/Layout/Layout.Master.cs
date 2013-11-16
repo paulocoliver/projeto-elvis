@@ -11,8 +11,10 @@ namespace Trabalho.WebView.Layout
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["AssociacaoID"] = 1;
             if (Session["AssociacaoID"] == null)
                 Response.Redirect("~/Login.aspx");
+
         }
     }
 }

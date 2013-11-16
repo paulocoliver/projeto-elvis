@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -158,11 +159,18 @@
     <Content Include="Cadastro.aspx" />
     <Content Include="Css\Login.css" />
     <Content Include="Empresa\Questionario.aspx" />
+    <Content Include="Empresa\Questionario_add.aspx" />
+    <Content Include="Empresa\Questionario_del.aspx" />
     <Content Include="Js\jQuery-ui.js" />
     <Content Include="Js\jQuery-1.9.1.js" />
     <Content Include="Css\Layout.css" />
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +194,20 @@
     </Compile>
     <Compile Include="Empresa\Questionario.aspx.designer.cs">
       <DependentUpon>Questionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\Questionario_add.aspx.cs">
+      <DependentUpon>Questionario_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\Questionario_add.aspx.designer.cs">
+      <DependentUpon>Questionario_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\Questionario_del.aspx.cs">
+      <DependentUpon>Questionario_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\Questionario_del.aspx.designer.cs">
+      <DependentUpon>Questionario_del.aspx</DependentUpon>
     </Compile>
     <Compile Include="Layout\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
@@ -215,6 +237,9 @@
     <Content Include="Assoc\Js\select2\select2_locale_en.js.template" />
     <Content Include="Assoc\Ajax\Buscar-Estados.ashx" />
     <Content Include="Assoc\Ajax\Buscar-Cidades.ashx" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

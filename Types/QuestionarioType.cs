@@ -35,24 +35,30 @@ namespace Trabalho.Types
             set { _Tipo = value; }
         }
 
+        public string TipoFormat
+        {
+            get {
+                string[] exploded = _Tipo.Split('_');
+                return exploded[0]; 
+            }
+        }
+
+        public Boolean TipoIsMultiple
+        {
+            get
+            {
+                string[] exploded = _Tipo.Split('_');
+                if (exploded[1] == "S")
+                    return true;
+                else
+                    return false;
+            }
+        }
+
         public string Descricao
         {
             get { return _Descricao; }
             set { _Descricao = value; }
         }
-
-        /*public string Nome
-        {
-            get { return _Nome; }
-            set
-            {
-                if (value == "")
-                {
-                    throw new Exception("Preencha o Nome!");
-                }
-                _Nome = value;
-            }
-        }*/
-
     }
 }

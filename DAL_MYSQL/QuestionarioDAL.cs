@@ -10,76 +10,124 @@ namespace Trabalho.DAL_MYSQL
 {
     public class QuestionarioDAL
     {
-        public Types.QuestionariosType select()
-        {
-            Types.QuestionariosType res = new Types.QuestionariosType();
-            return res;
-        }
-
-        /*public Types.AssociacaoType login(Types.AssociacaoType assoc)
+        public Types.QuestionarioType selectRecord(int id)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-
-            string SQL = "SELECT * FROM associacao A  " +
-                         "WHERE USUARIO = @usuario AND SENHA = @senha";
+            string SQL = "SELECT * FROM questionario " +
+                         "WHERE id_questionario = @id";
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-
-            cmd.Parameters.AddWithValue("@usuario", assoc.Usuario);
-            cmd.Parameters.AddWithValue("@senha", assoc.Senha);
+            cmd.Parameters.AddWithValue("@id", id);
             con.Open();
-            
             MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
+            Types.QuestionarioType type = new Types.QuestionarioType();
             if (dr.Read())
             {
-                assoc.IdAssociacao = Convert.ToInt32(dr["ID_ASSOCIACAO"].ToString());
-                assoc.Nome = dr["NOME"].ToString();
-                assoc.Url = dr["URL"].ToString();
-                assoc.Logo = dr["LOGO"].ToString();
+                type.idQuestionario = Int32.Parse(dr["id_questionario"].ToString());
+                type.IdAssociacao = Int32.Parse(dr["id_associacao"].ToString());
+                type.Tipo = dr["tipo"].ToString();
+                type.Descricao = dr["descricao"].ToString();
             }
-            return assoc;
+            return type;
         }
-        */
+
+        public Types.QuestionariosType select()
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "SELECT * FROM questionario";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            con.Open();
+            MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+            Types.QuestionariosType types = new Types.QuestionariosType();
+            while (dr.Read())
+            {
+                Types.QuestionarioType type = new Types.QuestionarioType();
+                type.idQuestionario = Int32.Parse(dr["id_questionario"].ToString());
+                type.IdAssociacao = Int32.Parse(dr["id_associacao"].ToString());
+                type.Tipo = dr["tipo"].ToString();
+                type.Descricao = dr["descricao"].ToString();
+                types.Add(type);
+            }
+            return types;
+        }
 
         public int insert(Types.QuestionarioType obj)
         {
-           /* MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "INSERT INTO associacao "+
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "INSERT INTO questionario " +
                             "( "+
-                                 "nome,"+
-                                 "url,"+
-                                 "usuario,"+
-                                 "senha" +
+                                 "id_associacao, " +
+                                 "tipo, " +
+                                 "descricao " +
                             ") " +
-                         "VALUES"+
+                         "VALUES "+
                           "( "+
-                                 "@nome,"+
-                                 "@url," +
-                                 "@usuario," +
-                                 "@senha" +
+                                 "@id_associacao, " +
+                                 "@tipo, " +
+                                 "@descricao " +
                            ")";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
 
-            cmd.Parameters.AddWithValue("@nome", obj.Nome);
-            cmd.Parameters.AddWithValue("@url", obj.Url);
-            cmd.Parameters.AddWithValue("@usuario", obj.Usuario);
-            cmd.Parameters.AddWithValue("@senha", obj.Senha);
+            cmd.Parameters.AddWithValue("@id_associacao", obj.IdAssociacao);
+            cmd.Parameters.AddWithValue("@tipo", obj.Tipo);
+            cmd.Parameters.AddWithValue("@descricao", obj.Descricao);
             con.Open();
             int id = 0;
             try
             {             
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "SELECT MAX(id_associacao) " +
-                                  "FROM associacao";
+                cmd.CommandText = "SELECT MAX(id_questionario) " +
+                                  "FROM questionario";
                 id = Convert.ToInt32(cmd.ExecuteScalar());
             }
             finally
             {
                 con.Close();
             }
-            return id;*/
-            return 0;
+
+            return id;
+        }
+
+        public void update(Types.QuestionarioType type)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "UPDATE questionario " +
+                         "SET id_associacao = @id_associacao, tipo = @tipo, descricao = @descricao " +
+                         "WHERE id_questionario = @id_questionario";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id_questionario", type.idQuestionario);
+            cmd.Parameters.AddWithValue("@id_associacao", type.IdAssociacao);
+            cmd.Parameters.AddWithValue("@tipo", type.Tipo);
+            cmd.Parameters.AddWithValue("@descricao", type.Descricao);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void delete(Types.QuestionarioType type)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "DELETE FROM questionario " +
+                         "WHERE id_questionario = @id";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id", type.idQuestionario);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

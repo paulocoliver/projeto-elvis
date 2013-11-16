@@ -17,5 +17,23 @@ namespace Trabalho.WebView.Empresa
             GridView1.DataSource = questBLL.select();
             GridView1.DataBind();
         }
+
+        public List<String> GetTipos()
+        {
+            List<String> list = new List<String>();
+
+            list.Add("Text");
+            list.Add("Textarea");
+            list.Add("Select");
+            list.Add("Checkbox");
+            list.Add("Radio");
+            list.Add("File");
+            list.Add("Color");
+            list.Add("Date");
+            list.Add("Time");
+
+            return list;
+        }
+        
     }
 }

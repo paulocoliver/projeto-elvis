@@ -5,16 +5,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/> 
-    <link href="/Css/Layout.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/> 
+    <link type="text/css" rel="stylesheet" href="../Css/Layout.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/animate/animate.min.css" />
+    <script type="text/javascript" src="../Js/jQuery-1.9.1.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Js/validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="../Js/validation/localization/messages_pt_BR.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    </asp:ContentPlaceHolder>     
 </head>
 
 <body>
-    <form id="form1" runat="server">
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <form id="form1" runat="server" class="validateForm">
+        <div class="navbar navbar-inverse" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,23 +31,94 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="Empresas.aspx">Empresas cadastradas</a></li>
-                        <li><a href="Empresa/Questionario.aspx">Questionario empresa</a></li>
+                        <li class="active"><a href="../Default.aspx">Home</a></li>
+                        <li><a href="~Empresas.aspx">Empresas</a></li>
+                        <li><a href="../Empresa/Questionario.aspx">Questionário empresa</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-
         <div class="container">
+            
+            <div id="alert-msg"></div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
  
             </asp:ContentPlaceHolder>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+           /* $.validator.setDefaults({
+                errorElement: "div",
+                errorClass: "help-block",
+                /*submitHandler: function() {
+                    alert("submitted! (skipping validation for cancel button)");
+                },*
+                highlight: function (element) {
+                    $(element).closest('.control-group').children('.controls').children('div[class="help-block"]').hide();
+                    //$(element).closest('.control-group').removeClass('success').addClass('error');
+                    $(element).closest('.control-group').addClass('error');
+                },
+                success: function (element) {
+                    $(element).closest('.control-group').children('.controls').children('div[class="help-block"]').show();
+                    element.addClass('valid').closest('.control-group').removeClass('error');
+                },
+                errorPlacement: function (error, element) {
+                    $(element).closest('.control-group').children('div[class="controls"]').append(error);
+                }
+            });*/
+
+            function alertMsg(type, title, msg) {
+                var html = '<div class="alert alert-' + type + ' alert-dismissable alert-fade">' +
+                            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                            '<strong">' + title + '</strong><br/>' + msg + '</div>';
+                $('#alert-msg').html(html);
+                $('.alert-fade').removeClass("animated fadeOutUp");
+                $('.alert-fade').addClass("animated fadeInDown");
+                setTimeout(function () {
+                    $('.alert-fade').removeClass("animated fadeInDown");
+                    $('.alert-fade').addClass("animated fadeOutUp");
+                    setTimeout(function () {
+                        $('.alert-fade').addClass("hide");
+                    }, 500);
+                }, 7000);
+            }
+
+            <%
+            if (Session["FlashMsg"] != null)
+            {
+                string msg_type = "info";
+                string msg_title = "Alerta";
+                string msg_content = Session["FlashMsg"].ToString();
+
+                if (Session["FlashMsgType"] == "success")
+                {
+                    msg_type = "success";
+                    msg_title = "Sucesso";
+                }
+                else if (Session["FlashMsgType"] == "danger")
+                {
+                    msg_type = "danger";
+                    msg_title = "Erro";
+                }
+                Session["FlashMsg"] = null;
+                Session["FlashMsgType"] = null;
+            %>
+            alertMsg('<%= msg_type %>', '<%= msg_title %>', '<%= msg_content %>');
+            <%    
+            }
+            %>
+
+            
+            $(".validateForm").validate();
+            $('.confirm-delete').on('click', function (event) {
+                event.preventDefault();
+                if (confirm('Apagar?')) {
+                    location.href = this.href;
+                }
+            });
+
+	    </script>
+       
     </form>
 </body>
 </html>
