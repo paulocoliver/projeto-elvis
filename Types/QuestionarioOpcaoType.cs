@@ -33,6 +33,5 @@ namespace Trabalho.Types
             get { return _Descricao; }
             set { _Descricao = value; }
         }
-
     }
 }

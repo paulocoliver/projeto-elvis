@@ -12,13 +12,51 @@ namespace Trabalho.WebView.Painel_Empresa
     public partial class Informacoes_basicas : System.Web.UI.Page
     {
         private EmpresaType _empresa;
-
+        
         protected void Page_Load(object sender, EventArgs e)
-        { 
+        {
             EmpresaBLL bll = new EmpresaBLL();
-            _empresa = bll.selectRecord(Convert.ToInt32(Session["idEmpresa"]));
+            int idEmpresa = Session["idEmpresa"]  != null ? Convert.ToInt32(Session["idEmpresa"]) : 7;
+
+            _empresa = bll.selectRecord(idEmpresa);
+
+            if (IsPostBack)
+            {
+                try
+                {
+                    if (save())
+                    {
+                        Response.Write("<script type='text/javascript'>alert('Dados atualizados com sucesso.')</script>");
+                    }
+                    else {
+                        throw new Exception("Não foi possivel atualizar o cadastro");
+                    }
+                }
+                catch (Exception error)
+                {
+                    Response.Write("<script type='text/javascript'>alert('" + error.Message + "')</script>");
+                }
+            }
 
             addValues();
+        }
+
+        public bool save()
+        {
+            _empresa.IdCidade = Convert.ToInt32(txtCidade.Text);
+            _empresa.RazaoSocial = txtRazaoSocial.Text;
+            _empresa.Nome = txtNome.Text;
+            _empresa.CNPJ = txtCNPJ.Text;
+            _empresa.IE = txtIE.Text;
+            _empresa.CEP = txtCEP.Text;
+            _empresa.Endereco = txtEndereco.Text;
+            _empresa.Complemento = txtComplemento.Text;
+            _empresa.Email = txtEmail.Text;
+            _empresa.Site = txtSite.Text;
+
+            EmpresaBLL bll = new EmpresaBLL();
+
+            return bll.update(_empresa);
         }
 
         public void addValues() {

@@ -16,6 +16,12 @@ namespace Trabalho.BLL
             return dal.insert(empresa);
         }
 
+        public bool update(Types.EmpresaType empresa)
+        {
+            EmpresaDAL dal = new EmpresaDAL();
+            return dal.update(empresa);
+        }
+
         public EmpresaType login(string email, string senha) { 
         
             EmpresaDAL dal = new EmpresaDAL();

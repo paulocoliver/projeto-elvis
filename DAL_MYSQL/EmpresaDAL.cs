@@ -78,6 +78,54 @@ namespace Trabalho.DAL_MYSQL
             return Convert.ToInt32(cmd.LastInsertedId);
         }
 
+        public bool update(Types.EmpresaType empresa)
+        {
+            MySqlCommand cmd;
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+
+            string SQL = "UPDATE empresa SET " +
+                                 "id_associacao = @id_associacao," +
+                                 "id_cidade = @id_cidade," +
+                                 "razao_social = @razao_social," +
+                                 "nome_fantasia = @nome_fantasia," +
+                                 "cnpj = @cnpj," +
+                                 "ie = @ie," +
+                                 "cep = @cep," +
+                                 "endereco = @endereco," +
+                                 "complemento = @complemento," +
+                                 "email = @email," +
+                                 "senha = @senha," +
+                                 "site = @site," +
+                                 "logo = @logo" +
+                            " WHERE id_empresa = @id_empresa";
+
+            cmd = new MySqlCommand(SQL, con);
+
+            cmd.Parameters.AddWithValue("@id_associacao", empresa.IdAssociacao);
+            cmd.Parameters.AddWithValue("@id_cidade", empresa.IdCidade);
+            cmd.Parameters.AddWithValue("@razao_social", empresa.RazaoSocial);
+            cmd.Parameters.AddWithValue("@nome_fantasia", empresa.Nome);
+            cmd.Parameters.AddWithValue("@cnpj", empresa.CNPJ);
+            cmd.Parameters.AddWithValue("@ie", empresa.IE);
+            cmd.Parameters.AddWithValue("@cep", empresa.CEP);
+            cmd.Parameters.AddWithValue("@endereco", empresa.Endereco);
+            cmd.Parameters.AddWithValue("@complemento", empresa.Complemento);
+            cmd.Parameters.AddWithValue("@email", empresa.Email);
+            cmd.Parameters.AddWithValue("@senha", empresa.Senha);
+            cmd.Parameters.AddWithValue("@site", empresa.Site);
+            cmd.Parameters.AddWithValue("@logo", empresa.Logo);
+            cmd.Parameters.AddWithValue("@id_empresa", empresa.IdEmpresa);
+
+            try{
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+            }finally{
+                con.Close();
+            }
+            return true;
+        }
+
         public EmpresaType login(string email, string senha)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);

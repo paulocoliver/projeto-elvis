@@ -20,9 +20,9 @@ namespace Trabalho.BLL
             return DAL.selectRecord(id);
         }
 
-        public Types.QuestionariosType select()
+        public Types.QuestionariosType select(int id_associacao, string id_empresa)
         {
-            return DAL.select();
+            return DAL.select(id_associacao, id_empresa);
         }
 
         public int insert(Types.QuestionarioType obj)

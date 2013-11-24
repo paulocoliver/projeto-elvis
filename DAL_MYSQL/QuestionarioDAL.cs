@@ -31,16 +31,20 @@ namespace Trabalho.DAL_MYSQL
             return type;
         }
 
-        public Types.QuestionariosType select(/*int id_associacao*/)
+        public Types.QuestionariosType select(int id_associacao, string id_empresa)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "SELECT * FROM questionario WHERE id_associacao = @id_associacao";
+             
+            string SQL = "SELECT * FROM questionario q WHERE id_associacao = @id_associacao";
+       
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-            cmd.Parameters.AddWithValue("@id_associacao",/*id_associacao*/ 1);
+            cmd.Parameters.AddWithValue("@id_associacao",id_associacao);
+
             con.Open();
             MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
             Types.QuestionariosType types = new Types.QuestionariosType();
+            QuestionarioRespostaDAL dalResposta = new QuestionarioRespostaDAL();
             while (dr.Read())
             {
                 Types.QuestionarioType type = new Types.QuestionarioType();
@@ -48,6 +52,10 @@ namespace Trabalho.DAL_MYSQL
                 type.IdAssociacao = Int32.Parse(dr["id_associacao"].ToString());
                 type.Tipo = dr["tipo"].ToString();
                 type.Descricao = dr["descricao"].ToString();
+                if (id_empresa != null)
+                {
+                    type.Respostas = dalResposta.select(Convert.ToInt32(id_empresa), type.idQuestionario);
+                }
                 types.Add(type);
             }
             return types;
@@ -87,7 +95,7 @@ namespace Trabalho.DAL_MYSQL
             {
                 con.Close();
             }
-
+         
             return id;
         }
 

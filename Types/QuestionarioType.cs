@@ -16,6 +16,7 @@ namespace Trabalho.Types
         private int _idAssociacao;
         private string _Tipo;
         private string _Descricao;
+        private QuestionarioRespostasType _Respostas;
 
         public int idQuestionario
         {
@@ -59,6 +60,12 @@ namespace Trabalho.Types
         {
             get { return _Descricao; }
             set { _Descricao = value; }
+        }
+
+        public QuestionarioRespostasType Respostas
+        {
+            get { return _Respostas; }
+            set { _Respostas = value; }
         }
     }
 }
