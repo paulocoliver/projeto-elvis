@@ -12,9 +12,9 @@ namespace Trabalho.Types
 
     public class EmpresaType
     {
-        private string _idEmpresa;
-        private string _idAssociacao;
-        private string _idCidade;
+        private int _idEmpresa;
+        private int _idAssociacao;
+        private int _idCidade;
         private string _RazaoSocial;
         private string _Senha;
         private string _Nome;
@@ -28,13 +28,13 @@ namespace Trabalho.Types
         private string _Logo;
         private string _DataCadastro;
 
-        public string IdEmpresa
+        public int IdEmpresa
         {
             get { return _idEmpresa; }
             set { _idEmpresa = value; }
         }
 
-        public string IdAssociacao
+        public int IdAssociacao
         {
             get { return _idAssociacao; }
             set { _idAssociacao = value; }
@@ -47,16 +47,19 @@ namespace Trabalho.Types
         }
 
 
-        public string IdCidade
+        public int IdCidade
         {
             get { return _idCidade; }
             set
             {
-                if (value == "")
+                if (value > 0)
                 {
+                    _idCidade = value;
+                }
+                else {
                     throw new Exception("Selecione a Cidade!");
                 }
-                _idCidade = value;
+               
             }
         }
 
@@ -67,7 +70,7 @@ namespace Trabalho.Types
             {
                 if (value == "")
                 {
-                    throw new Exception("Preencha o Nome!");
+                    throw new Exception("Preencha a Razão Social!");
                 }
                 _RazaoSocial = value;
             }
@@ -139,10 +142,6 @@ namespace Trabalho.Types
             get { return _Complemento; }
             set
             {
-                if (value == "")
-                {
-                    throw new Exception("Preencha o Complemento!");
-                }
                 _Complemento = value;
             }
         }

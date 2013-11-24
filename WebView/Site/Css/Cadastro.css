@@ -1,0 +1,46 @@
+﻿.form-signup {
+   max-width: 670px;
+   padding: 15px;
+   margin: 0 auto;
+}
+.form-signup > span{
+    display:inline-block;
+    vertical-align:middle;
+    height:27px;
+    line-height:27px;
+}
+.select2-container{
+    width: 151px !important;
+}
+
+#form-cadastro > select {
+    width:300px;
+}
+.lb_option {
+    width:auto !important;
+}
+.input_option {
+    width:auto !important;
+    margin:0 5px;
+}
+input[type="Date"],input[type="Time"] {
+    width:200px !important;
+}
+input[type="Color"] {
+    width:40px !important;
+}
+#form-cadastro > input {
+    width:590px;
+}
+#ContentPlaceHolder1_lbEstado,#ContentPlaceHolder1_lbCidade {
+    width:60px !important;
+    margin-left:10px;
+}
+
+#form-cadastro > input[type="submit"] {
+    position: absolute;
+    right: 20px;
+    width: 100px !important;
+    bottom: 10px;
+    cursor:pointer;
+}

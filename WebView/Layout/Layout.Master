@@ -5,39 +5,120 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link href="/Css/Layout.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/> 
+    <link type="text/css" rel="stylesheet" href="../Css/Layout.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/animate/animate.min.css" />
+    <script type="text/javascript" src="../Js/jQuery-1.9.1.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Js/validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="../Js/validation/localization/messages_pt_BR.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    </asp:ContentPlaceHolder>     
 </head>
 
 <body>
-    <form id="form1" runat="server">
-        <div id="Header" class="degrade">
-            <div id="Header-center">
-                <div id="link-login">
-                    <img alt="" title="" src="/Assoc/Img/ico_log.png" id="IconLogin" />            
-                    <asp:HyperLink ID="HyperLink3" runat="server">Cadastrar-se / Logar</asp:HyperLink>                   
+    <form id="form1" runat="server" class="validateForm">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Admin Associação</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="../Default.aspx">Home</a></li>
+                        <li><a href="/Painel/Empresas.aspx">Empresas</a></li>
+                        <li><a href="/Painel/Questionario.aspx">Questionário empresa</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div id="Menu" class="degrade">
-            <div id="Menu-center">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="item-menu">Home</asp:HyperLink>
-            </div>
-        </div>
-
-        <div id="Content">
-            <div id="Content-center">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="container">
+            
+            <div id="alert-msg"></div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
  
-                </asp:ContentPlaceHolder>
-            </div>
+            </asp:ContentPlaceHolder>
         </div>
 
-        <div id="Footer" class="degrade">
-            <div id="Footer-center"></div>
-        </div>
+        <script type="text/javascript">
+           /* $.validator.setDefaults({
+                errorElement: "div",
+                errorClass: "help-block",
+                /*submitHandler: function() {
+                    alert("submitted! (skipping validation for cancel button)");
+                },*
+                highlight: function (element) {
+                    $(element).closest('.control-group').children('.controls').children('div[class="help-block"]').hide();
+                    //$(element).closest('.control-group').removeClass('success').addClass('error');
+                    $(element).closest('.control-group').addClass('error');
+                },
+                success: function (element) {
+                    $(element).closest('.control-group').children('.controls').children('div[class="help-block"]').show();
+                    element.addClass('valid').closest('.control-group').removeClass('error');
+                },
+                errorPlacement: function (error, element) {
+                    $(element).closest('.control-group').children('div[class="controls"]').append(error);
+                }
+            });*/
+
+            function alertMsg(type, title, msg) {
+                var html = '<div class="alert alert-' + type + ' alert-dismissable alert-fade">' +
+                            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                            '<strong">' + title + '</strong><br/>' + msg + '</div>';
+                $('#alert-msg').html(html);
+                $('.alert-fade').removeClass("animated fadeOutUp");
+                $('.alert-fade').addClass("animated fadeInDown");
+                setTimeout(function () {
+                    $('.alert-fade').removeClass("animated fadeInDown");
+                    $('.alert-fade').addClass("animated fadeOutUp");
+                    setTimeout(function () {
+                        $('.alert-fade').addClass("hide");
+                    }, 500);
+                }, 7000);
+            }
+
+            <%
+            if (Session["FlashMsg"] != null)
+            {
+                string msg_type = "info";
+                string msg_title = "Alerta";
+                string msg_content = Session["FlashMsg"].ToString();
+
+                if (Session["FlashMsgType"] == "success")
+                {
+                    msg_type = "success";
+                    msg_title = "Sucesso";
+                }
+                else if (Session["FlashMsgType"] == "danger")
+                {
+                    msg_type = "danger";
+                    msg_title = "Erro";
+                }
+                Session["FlashMsg"] = null;
+                Session["FlashMsgType"] = null;
+            %>
+            alertMsg('<%= msg_type %>', '<%= msg_title %>', '<%= msg_content %>');
+            <%    
+            }
+            %>
+
+            
+            $(".validateForm").validate();
+            $('.confirm-delete').on('click', function (event) {
+                event.preventDefault();
+                if (confirm('Apagar?')) {
+                    location.href = this.href;
+                }
+            });
+
+	    </script>
+       
     </form>
 </body>
 </html>

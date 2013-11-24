@@ -37,5 +37,26 @@ namespace Trabalho.DAL_MYSQL
             }
             return cidades;
         }
+
+        public Types.cidadeType selectRecord(int idCidade)
+        {
+                MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+                string SQL = "select * from cidade where id_cidade = @idCidade";
+
+                MySqlCommand cmd = new MySqlCommand(SQL, con);
+                cmd.Parameters.AddWithValue("@idCidade", idCidade);
+                con.Open();
+
+                MySqlDataReader rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                Types.cidadeType cidade = new Types.cidadeType();
+                while (rd.Read())
+                {
+                    cidade.idEstado  = rd["id_estado"].ToString();
+                    cidade.idCidade  = rd["id_cidade"].ToString();
+                    cidade.Descricao = rd["descricao"].ToString();
+                }
+                return cidade;
+        }
     }
 }

@@ -14,5 +14,11 @@ namespace Trabalho.BLL
             EstadoDAL estado = new EstadoDAL();
             return estado.select(idPais);
         }
+
+        public Types.EstadoType selectRecord(int idEstado)
+        {
+            EstadoDAL estado = new EstadoDAL();
+            return estado.selectRecord(idEstado);
+        }
     }
 }

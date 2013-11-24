@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -75,99 +76,182 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assoc\Cadastrar.aspx" />
-    <Content Include="Assoc\Css\Cadastro.css" />
-    <Content Include="Assoc\Css\Layout.css" />
-    <Content Include="Assoc\Default.aspx" />
-    <Content Include="Assoc\Img\ico_log.png" />
-    <Compile Include="Assoc\Ajax\Buscar-Cidades.ashx.cs">
+    <Compile Include="Painel-Empresa\Informacoes-basicas.aspx.cs">
+      <DependentUpon>Informacoes-basicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Informacoes-basicas.aspx.designer.cs">
+      <DependentUpon>Informacoes-basicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel-Empresa\Informacoes-adicionais.aspx.cs">
+      <DependentUpon>Informacoes-adicionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Informacoes-adicionais.aspx.designer.cs">
+      <DependentUpon>Informacoes-adicionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Content Include="Img\top-arrow.gif" />
+    <Content Include="Painel-Empresa\Css\Layout.css" />
+    <Content Include="Painel-Empresa\Css\Questionario.css" />
+    <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />
+    <Content Include="Painel-Empresa\Js\Layout.js" />
+    <Content Include="Site\Css\Login.css" />
+    <Content Include="Painel-Empresa\Default.aspx" />
+    <Content Include="Site\Cadastrar.aspx" />
+    <Content Include="Site\Css\Cadastro.css" />
+    <Content Include="Site\Css\Layout.css" />
+    <Content Include="Site\Default.aspx" />
+    <Content Include="Site\Img\ico_log.png" />
+    <Compile Include="Painel-Empresa\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel-Empresa\Layout\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Layout\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Ajax\Buscar-Cidades.ashx.cs">
       <DependentUpon>Buscar-Cidades.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Assoc\Ajax\Buscar-Estados.ashx.cs">
+    <Compile Include="Site\Ajax\Buscar-Estados.ashx.cs">
       <DependentUpon>Buscar-Estados.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Assoc\Cadastrar.aspx.cs">
+    <Compile Include="Site\Cadastrar.aspx.cs">
       <DependentUpon>Cadastrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Assoc\Cadastrar.aspx.designer.cs">
+    <Compile Include="Site\Cadastrar.aspx.designer.cs">
       <DependentUpon>Cadastrar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Assoc\Default.aspx.cs">
+    <Compile Include="Site\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Assoc\Default.aspx.designer.cs">
+    <Compile Include="Site\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Assoc\Layout\Layout.Master.cs">
+    <Compile Include="Site\Layout\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Assoc\Layout\Layout.Master.designer.cs">
+    <Compile Include="Site\Layout\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
-    <Content Include="Assoc\Js\Cadastrar.js" />
-    <Content Include="Assoc\Js\select2\select2-spinner.gif" />
-    <Content Include="Assoc\Js\select2\select2.css" />
-    <Content Include="Assoc\Js\select2\select2.js" />
-    <Content Include="Assoc\Js\select2\select2.min.js" />
-    <Content Include="Assoc\Js\select2\select2.png" />
-    <Content Include="Assoc\Js\select2\select2x2.png" />
-    <Content Include="Assoc\Js\select2\select2_locale_ar.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_bg.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ca.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_cs.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_da.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_de.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_el.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_es.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_et.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_eu.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_fa.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_fi.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_fr.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_gl.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_he.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_hr.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_hu.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_id.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_is.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_it.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ja.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ko.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_lt.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_lv.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_mk.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ms.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_nl.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_no.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_pl.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_pt-BR.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_pt-PT.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ro.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ru.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_sk.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_sv.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_th.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_tr.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_ua.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_vi.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_zh-CN.js" />
-    <Content Include="Assoc\Js\select2\select2_locale_zh-TW.js" />
+    <Content Include="Site\Js\Cadastrar.js" />
+    <Content Include="Site\Js\select2\select2-spinner.gif" />
+    <Content Include="Site\Js\select2\select2.css" />
+    <Content Include="Site\Js\select2\select2.js" />
+    <Content Include="Site\Js\select2\select2.min.js" />
+    <Content Include="Site\Js\select2\select2.png" />
+    <Content Include="Site\Js\select2\select2x2.png" />
+    <Content Include="Site\Js\select2\select2_locale_ar.js" />
+    <Content Include="Site\Js\select2\select2_locale_bg.js" />
+    <Content Include="Site\Js\select2\select2_locale_ca.js" />
+    <Content Include="Site\Js\select2\select2_locale_cs.js" />
+    <Content Include="Site\Js\select2\select2_locale_da.js" />
+    <Content Include="Site\Js\select2\select2_locale_de.js" />
+    <Content Include="Site\Js\select2\select2_locale_el.js" />
+    <Content Include="Site\Js\select2\select2_locale_es.js" />
+    <Content Include="Site\Js\select2\select2_locale_et.js" />
+    <Content Include="Site\Js\select2\select2_locale_eu.js" />
+    <Content Include="Site\Js\select2\select2_locale_fa.js" />
+    <Content Include="Site\Js\select2\select2_locale_fi.js" />
+    <Content Include="Site\Js\select2\select2_locale_fr.js" />
+    <Content Include="Site\Js\select2\select2_locale_gl.js" />
+    <Content Include="Site\Js\select2\select2_locale_he.js" />
+    <Content Include="Site\Js\select2\select2_locale_hr.js" />
+    <Content Include="Site\Js\select2\select2_locale_hu.js" />
+    <Content Include="Site\Js\select2\select2_locale_id.js" />
+    <Content Include="Site\Js\select2\select2_locale_is.js" />
+    <Content Include="Site\Js\select2\select2_locale_it.js" />
+    <Content Include="Site\Js\select2\select2_locale_ja.js" />
+    <Content Include="Site\Js\select2\select2_locale_ko.js" />
+    <Content Include="Site\Js\select2\select2_locale_lt.js" />
+    <Content Include="Site\Js\select2\select2_locale_lv.js" />
+    <Content Include="Site\Js\select2\select2_locale_mk.js" />
+    <Content Include="Site\Js\select2\select2_locale_ms.js" />
+    <Content Include="Site\Js\select2\select2_locale_nl.js" />
+    <Content Include="Site\Js\select2\select2_locale_no.js" />
+    <Content Include="Site\Js\select2\select2_locale_pl.js" />
+    <Content Include="Site\Js\select2\select2_locale_pt-BR.js" />
+    <Content Include="Site\Js\select2\select2_locale_pt-PT.js" />
+    <Content Include="Site\Js\select2\select2_locale_ro.js" />
+    <Content Include="Site\Js\select2\select2_locale_ru.js" />
+    <Content Include="Site\Js\select2\select2_locale_sk.js" />
+    <Content Include="Site\Js\select2\select2_locale_sv.js" />
+    <Content Include="Site\Js\select2\select2_locale_th.js" />
+    <Content Include="Site\Js\select2\select2_locale_tr.js" />
+    <Content Include="Site\Js\select2\select2_locale_ua.js" />
+    <Content Include="Site\Js\select2\select2_locale_vi.js" />
+    <Content Include="Site\Js\select2\select2_locale_zh-CN.js" />
+    <Content Include="Site\Js\select2\select2_locale_zh-TW.js" />
+    <Content Include="Cadastro.aspx" />
+    <Content Include="Css\Login.css" />
+    <Content Include="Painel\Questionario.aspx" />
+    <Content Include="Painel\Questionario_add.aspx" />
+    <Content Include="Painel\Questionario_del.aspx" />
     <Content Include="Js\jQuery-ui.js" />
     <Content Include="Js\jQuery-1.9.1.js" />
     <Content Include="Css\Layout.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="Painel-Empresa\Informacoes-adicionais.aspx" />
+    <Content Include="Site\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Questionario.aspx.cs">
+      <DependentUpon>Questionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Questionario.aspx.designer.cs">
+      <DependentUpon>Questionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Questionario_add.aspx.cs">
+      <DependentUpon>Questionario_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Questionario_add.aspx.designer.cs">
+      <DependentUpon>Questionario_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Questionario_del.aspx.cs">
+      <DependentUpon>Questionario_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Questionario_del.aspx.designer.cs">
+      <DependentUpon>Questionario_del.aspx</DependentUpon>
     </Compile>
     <Compile Include="Layout\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
@@ -176,20 +260,31 @@
     <Compile Include="Layout\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assoc\Layout\Layout.Master" />
+    <Content Include="Site\Layout\Layout.Master" />
     <Content Include="Layout\Layout.Master" />
     <Content Include="packages.config" />
-    <Content Include="Assoc\Js\select2\bower.json" />
-    <Content Include="Assoc\Js\select2\LICENSE" />
-    <Content Include="Assoc\Js\select2\README.md" />
-    <Content Include="Assoc\Js\select2\release.sh" />
-    <Content Include="Assoc\Js\select2\select2.jquery.json" />
-    <Content Include="Assoc\Js\select2\select2_locale_en.js.template" />
-    <Content Include="Assoc\Ajax\Buscar-Estados.ashx" />
-    <Content Include="Assoc\Ajax\Buscar-Cidades.ashx" />
+    <Content Include="Site\Js\select2\bower.json" />
+    <Content Include="Site\Js\select2\LICENSE" />
+    <Content Include="Site\Js\select2\README.md" />
+    <Content Include="Site\Js\select2\release.sh" />
+    <Content Include="Site\Js\select2\select2.jquery.json" />
+    <Content Include="Site\Js\select2\select2_locale_en.js.template" />
+    <Content Include="Site\Ajax\Buscar-Estados.ashx" />
+    <Content Include="Site\Ajax\Buscar-Cidades.ashx" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Painel-Empresa\Layout\Layout.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

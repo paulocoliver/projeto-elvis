@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,9 @@
     <Compile Include="BairroBLL.cs" />
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CidadeBLL.cs" />
+    <Compile Include="AssociacaoBLL.cs" />
+    <Compile Include="QuestionarioOpcaoBLL.cs" />
+    <Compile Include="QuestionarioBLL.cs" />
     <Compile Include="DepartamentoBLL.cs" />
     <Compile Include="EmpresaBLL.cs" />
     <Compile Include="EmpresarioBLL.cs" />

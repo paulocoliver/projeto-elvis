@@ -1,0 +1,22 @@
+﻿.form-horizontal{
+    max-width: 670px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.color {
+    width: 45px;
+}
+.time {
+   width: 100px;
+}
+.date {
+    width: 200px;
+}
+.form-inline label, .form-inline input{
+    vertical-align:middle;
+    margin:0;
+    padding:0;
+}
+.form-inline input {
+    margin:0 10px;
+}

@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Trabalho.WebView.Painel_Empresa.Layout.Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title> Painel Empresa </title>
+
+    <link href="~/Painel-Empresa/Css/Layout.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/Js/jQuery-1.9.1.js"></script>
+    <script type="text/javascript" src="/Js/jQuery-ui.js"></script>
+    <script type="text/javascript" src="/Js/jQuery-mask.js"></script>
+    <script type="text/javascript" src="/Painel-Empresa/Js/Layout.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="Header" class="degrade">
+            <div id="Header-center">
+                 <h1>Painel Empresa</h1>
+                 <div id="link-login">  
+                      <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/Site/Default.aspx">Site da Associação</asp:HyperLink>                   
+                </div>
+            </div>
+        </div>
+
+        <div id="Menu" class="degrade">
+            <div id="Menu-center">
+                <asp:HyperLink ID="linkHome" runat="server" CssClass="item-menu" NavigateUrl="~/Painel-Empresa/default.aspx">Home</asp:HyperLink>
+                <div class="menu-dropdown item-menu" style="position:relative">
+                    Meus Dados
+                    <div style="display:none; width: 170px;" class="submenu degrade">
+                        <asp:HyperLink ID="linkEventos" runat="server" NavigateUrl="~/Painel-Empresa/informacoes-basicas.aspx">Informações Básicas</asp:HyperLink>
+                        <asp:HyperLink ID="linkQuestionario" runat="server" NavigateUrl="~/Painel-Empresa/informacoes-adicionais.aspx">Informações Adicionais</asp:HyperLink>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div id="Content">
+            <div id="Content-center">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+ 
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div id="Footer" class="degrade">
+            <div id="Footer-center"></div>
+        </div>
+
+    </form>
+     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -30,5 +30,25 @@ namespace Trabalho.DAL_MYSQL
             }
             return paises;
         }
+
+        public Types.PaisType selectRecord(int idPais)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "select * from pais where id_pais = @idPais";
+
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@idPais", idPais);
+            con.Open();
+
+            MySqlDataReader rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+            Types.PaisType pais = new Types.PaisType();
+            while (rd.Read())
+            {
+                pais.idPais = rd["id_pais"].ToString();
+                pais.Descricao = rd["descricao"].ToString();
+            }
+            return pais;
+        }
     }
 }

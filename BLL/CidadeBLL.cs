@@ -14,5 +14,11 @@ namespace Trabalho.BLL
             CidadeDAL cidade = new CidadeDAL();
             return cidade.select(idEstado);
         }
+
+        public Types.cidadeType selectRecord(int idCidade)
+        {
+            CidadeDAL cidade = new CidadeDAL();
+            return cidade.selectRecord(idCidade);
+        }
     }
 }

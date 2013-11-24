@@ -13,5 +13,11 @@ namespace Trabalho.BLL
             PaisDAL pais = new PaisDAL();
             return pais.select();
         }
+
+        public Types.PaisType selectRecord(int idPais)
+        {
+            PaisDAL pais = new PaisDAL();
+            return pais.selectRecord(idPais);
+        }
     }
 }

@@ -38,5 +38,27 @@ namespace Trabalho.DAL_MYSQL
             }
             return estados;
         }
+
+        public Types.EstadoType selectRecord(int idEstado)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "select * from estado where id_estado = @idEstado";
+
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@idEstado", idEstado);
+            con.Open();
+
+            MySqlDataReader rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+            Types.EstadoType estado = new Types.EstadoType();
+            while (rd.Read())
+            {
+                estado.idEstado = rd["id_estado"].ToString();
+                estado.idPais   = rd["id_pais"].ToString();
+                estado.Descricao = rd["descricao"].ToString();
+                estado.Sigla = rd["sigla"].ToString();
+            }
+            return estado;
+        }
     }
 }
