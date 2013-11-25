@@ -44,6 +44,7 @@
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CidadeBLL.cs" />
     <Compile Include="AssociacaoBLL.cs" />
+    <Compile Include="EventoBLL.cs" />
     <Compile Include="QuestionarioOpcaoBLL.cs" />
     <Compile Include="QuestionarioBLL.cs" />
     <Compile Include="DepartamentoBLL.cs" />

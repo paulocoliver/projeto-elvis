@@ -49,6 +49,7 @@
     <Compile Include="CargoDAL.cs" />
     <Compile Include="CidadeDAL.cs" />
     <Compile Include="AssociacaoDAL.cs" />
+    <Compile Include="EventoDAL.cs" />
     <Compile Include="QuestionarioOpcaoDAL.cs" />
     <Compile Include="QuestionarioDAL.cs" />
     <Compile Include="Dados.cs" />

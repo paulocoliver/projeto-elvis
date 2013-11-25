@@ -90,6 +90,27 @@
     <Compile Include="Painel-Empresa\Informacoes-adicionais.aspx.designer.cs">
       <DependentUpon>Informacoes-adicionais.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Painel\Eventos.aspx.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Eventos.aspx.designer.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Eventos_add.aspx.cs">
+      <DependentUpon>Eventos_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Eventos_add.aspx.designer.cs">
+      <DependentUpon>Eventos_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Eventos_del.aspx.cs">
+      <DependentUpon>Eventos_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Eventos_del.aspx.designer.cs">
+      <DependentUpon>Eventos_del.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,10 +119,14 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Content Include="Img\top-arrow.gif" />
+    <Content Include="Js\Evento.js" />
     <Content Include="Painel-Empresa\Css\Layout.css" />
     <Content Include="Painel-Empresa\Css\Questionario.css" />
     <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />
     <Content Include="Painel-Empresa\Js\Layout.js" />
+    <Content Include="Painel\Eventos.aspx" />
+    <Content Include="Painel\Eventos_add.aspx" />
+    <Content Include="Painel\Eventos_del.aspx" />
     <Content Include="Site\Css\Login.css" />
     <Content Include="Painel-Empresa\Default.aspx" />
     <Content Include="Site\Cadastrar.aspx" />

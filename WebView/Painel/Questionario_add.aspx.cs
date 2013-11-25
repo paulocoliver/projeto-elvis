@@ -18,7 +18,7 @@ namespace Trabalho.WebView.Empresa
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.url_list = "~/Empresa/Questionario.aspx";
+            this.url_list = "~/Painel/Questionario.aspx";
 
             this.questionarioBLL = new QuestionarioBLL();
             this.OpcoesQuestionario = new QuestionarioOpcoesType();

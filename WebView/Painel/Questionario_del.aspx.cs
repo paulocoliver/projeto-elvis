@@ -38,7 +38,7 @@ namespace Trabalho.WebView.Empresa
                 Session["FlashMsgType"] = "danger";
             }
             
-            Response.Redirect("~/Empresa/Questionario.aspx");
+            Response.Redirect("~/Painel/Questionario.aspx");
         }
     }
 }
