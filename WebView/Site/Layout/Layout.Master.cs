@@ -13,6 +13,8 @@ namespace Trabalho.WebView.Assoc.Layout
 
         protected void Page_Load(object sender, EventArgs e)
         {
+           Session["AssociacaoID"] = 1;
+
            autenticado = (Session["idEmpresa"] == null ? false : true );
         }
     }

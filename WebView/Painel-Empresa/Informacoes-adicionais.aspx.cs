@@ -17,8 +17,8 @@ namespace Trabalho.WebView.Painel_Empresa
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _idEmpresa = (Session["idEmpresa"] == null ? "7" : Session["idEmpresa"].ToString());
-            _idAssociacao = (Session["idAssociacao"] == null ? 1 : Convert.ToInt32(Session["idAssociacao"].ToString()));
+            _idEmpresa = Session["idEmpresa"].ToString();
+            _idAssociacao = Convert.ToInt32(Session["AssociacaoID"].ToString());
 
             QuestionarioBLL bll = new QuestionarioBLL();
             questionarios = bll.select(_idAssociacao, _idEmpresa);

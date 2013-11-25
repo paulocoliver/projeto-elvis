@@ -13,12 +13,13 @@ namespace Trabalho.WebView.Painel_Empresa.Layout
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
+            Session["AssociacaoID"] = 1;
+            Session["idEmpresa"] = 7;
+
             if(Session["idEmpresa"] == null)
             {
                 Response.Redirect("/Site/Default.aspx");
             }
-             * */
         }
     }
 }

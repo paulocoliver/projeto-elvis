@@ -32,6 +32,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="../Default.aspx">Home</a></li>
+                        <li><a href="/Painel/PaginaInicial.aspx">Editar Conteúdo da Inicial</a></li>
                         <li><a href="/Painel/Empresas.aspx">Empresas</a></li>
                         <li><a href="/Painel/Questionario.aspx">Questionário empresa</a></li>
                         <li><a href="/Painel/Eventos.aspx">Eventos</a></li>

@@ -21,6 +21,11 @@ namespace Trabalho.BLL
             return DAL.insert(evento);
         }
 
+        public EventosType select(int idAssociacao)
+        {
+            return DAL.select(idAssociacao);
+        }
+
         public EventoType selectRecord(int idEvento) {
             return DAL.selectRecord(idEvento);
         }

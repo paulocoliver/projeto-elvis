@@ -12,8 +12,6 @@ namespace Trabalho.WebView.Site
 {
     public partial class Cadastrar : System.Web.UI.Page
     {
-        private int _id_associacao = 1;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
@@ -56,7 +54,7 @@ namespace Trabalho.WebView.Site
         public EmpresaType save()
         {
             EmpresaType empresa = new EmpresaType();
-            empresa.IdAssociacao = _id_associacao;
+            empresa.IdAssociacao = Convert.ToInt32(Session["AssociacaoID"]);
             empresa.IdCidade = Convert.ToInt32(txtCidade.Text);
             empresa.RazaoSocial = txtRazaoSocial.Text;
             empresa.Senha = txtSenha.Text;

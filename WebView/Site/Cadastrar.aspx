@@ -6,12 +6,11 @@
 
    <script type="text/javascript" src="/Site/Js/select2/select2.js"></script>
    <script type="text/javascript" src="/Site/Js/Cadastrar.js"></script>
-   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
 
 </asp:Content>
 
  <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container">
+     
         <div class="form-signup">
             <h2 class="form-signin-heading">Cadastrar Empresa</h2>
 
@@ -70,7 +69,6 @@
             <input id="Submit1" type="submit" value="submit"  class="btn btn-lg btn-primary"  style="float:right"/>
             <div class="clearfix"></div><br />
         </div>
-      
-    </div>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+     
+    
 </asp:Content>

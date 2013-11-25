@@ -4,9 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title> Faça Parte </title>
-
     <link href="/Site/Css/Layout.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
 
     <script type="text/javascript" src="/Js/jQuery-1.9.1.js"></script>
     <script type="text/javascript" src="/Js/jQuery-ui.js"></script>
@@ -18,42 +17,93 @@
 
 <body>
     <form id="form1" runat="server">
-        <div id="Header" class="degrade">
-            <div id="Header-center">
-                <h1>Minha Associação</h1>
-                <div id="link-login">  
-                    <% if(autenticado){ %>
-             
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/Painel-Empresa/Default.aspx">Meu Painel</asp:HyperLink>                   
-                   
-                     <%}else{ %>
-                                  
-                        <img alt="" title="" src="/Site/Img/ico_log.png" id="IconLogin" />            
-                        <asp:HyperLink ID="linkCadastrar" runat="server" NavigateUrl="/Site/Login.aspx">Cadastrar-se / Logar</asp:HyperLink>                   
-                    
-                     <%} %>
+
+         <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Site Associação</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li><a href="/Site/Default.aspx">Home</a></li>
+                        <li><a href="/Site/eventos.aspx">Eventos</a></li>
+
+                        <% if(autenticado){ %>         
+                            <li><a href="/Painel-Empresa/Default.aspx">Meu Painel</a></li>                             
+                         <%}else{ %>                             
+                             <li><a href="/Site/Login.aspx">Cadastrar-se / Logar</a></li>                                      
+                         <%} %>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div id="Menu" class="degrade">
-            <div id="Menu-center">
-                <asp:HyperLink ID="linkHome" runat="server" CssClass="item-menu" NavigateUrl="/Site/default.aspx">Home</asp:HyperLink>
-                <asp:HyperLink ID="linkEventos" runat="server" CssClass="item-menu" NavigateUrl="/Site/eventos.aspx">Eventos</asp:HyperLink>
-            </div>
-        </div>
-
-        <div id="Content">
-            <div id="Content-center">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="container">
+            
+            <div id="alert-msg"></div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
  
-                </asp:ContentPlaceHolder>
-            </div>
+            </asp:ContentPlaceHolder>
         </div>
 
-        <div id="Footer" class="degrade">
-            <div id="Footer-center"></div>
-        </div>
+        <script type="text/javascript">
+ 
+            function alertMsg(type, title, msg) {
+                var html = '<div class="alert alert-' + type + ' alert-dismissable alert-fade">' +
+                            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                            '<strong">' + title + '</strong><br/>' + msg + '</div>';
+                $('#alert-msg').html(html);
+                $('.alert-fade').removeClass("animated fadeOutUp");
+                $('.alert-fade').addClass("animated fadeInDown");
+                setTimeout(function () {
+                    $('.alert-fade').removeClass("animated fadeInDown");
+                    $('.alert-fade').addClass("animated fadeOutUp");
+                    setTimeout(function () {
+                        $('.alert-fade').addClass("hide");
+                    }, 500);
+                }, 7000);
+            }
+
+            <%
+            if (Session["FlashMsg"] != null)
+            {
+                string msg_type = "info";
+                string msg_title = "Alerta";
+                string msg_content = Session["FlashMsg"].ToString();
+
+                if (Session["FlashMsgType"] == "success")
+                {
+                    msg_type = "success";
+                    msg_title = "Sucesso";
+                }
+                else if (Session["FlashMsgType"] == "danger")
+                {
+                    msg_type = "danger";
+                    msg_title = "Erro";
+                }
+                Session["FlashMsg"] = null;
+                Session["FlashMsgType"] = null;
+            %>
+            alertMsg('<%= msg_type %>', '<%= msg_title %>', '<%= msg_content %>');
+            <%    
+            }
+            %>
+
+            $(".validateForm").validate();
+            $('.confirm-delete').on('click', function (event) {
+                event.preventDefault();
+                if (confirm('Apagar?')) {
+                    location.href = this.href;
+                }
+            });
+	    </script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     </form>
 </body>
 </html>

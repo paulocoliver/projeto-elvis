@@ -39,7 +39,7 @@ namespace Trabalho.DAL_MYSQL
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
 
-            string SQL = "SELECT * FROM evento WHERE id_associacao = @idAssociacao";
+            string SQL = "SELECT * FROM evento WHERE id_associacao = @idAssociacao ORDER BY data_ini DESC";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
             cmd.Parameters.AddWithValue("@idAssociacao", idAssociacao);

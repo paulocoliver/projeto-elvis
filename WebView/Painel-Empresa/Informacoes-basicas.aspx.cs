@@ -16,7 +16,7 @@ namespace Trabalho.WebView.Painel_Empresa
         protected void Page_Load(object sender, EventArgs e)
         {
             EmpresaBLL bll = new EmpresaBLL();
-            int idEmpresa = Session["idEmpresa"]  != null ? Convert.ToInt32(Session["idEmpresa"]) : 7;
+            int idEmpresa = Convert.ToInt32(Session["idEmpresa"]);
 
             _empresa = bll.selectRecord(idEmpresa);
 
