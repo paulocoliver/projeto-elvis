@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using Trabalho.BLL;
 using Trabalho.Types;
 
-namespace Trabalho.WebView.Site
+namespace Trabalho.WebView
 {
     public partial class Login : System.Web.UI.Page
     {

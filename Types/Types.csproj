@@ -44,6 +44,7 @@
     <Compile Include="CargoType.cs" />
     <Compile Include="CidadeType.cs" />
     <Compile Include="AssociacaoType.cs" />
+    <Compile Include="FinanceiroType.cs" />
     <Compile Include="EventoType.cs" />
     <Compile Include="PagamentoType.cs" />
     <Compile Include="PaginaInicialType.cs" />

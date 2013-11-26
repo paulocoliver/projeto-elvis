@@ -15,7 +15,7 @@ namespace Trabalho.Types
         private int _IdFinanceiro;
         private int _IdAssociacao;
         private string _Titulo;
-        private string _Valor;
+        private double _Valor;
         private string _Data;
         private string _Tipo;
 
@@ -37,7 +37,7 @@ namespace Trabalho.Types
             set { _Titulo = value; }
         }
 
-        public string Valor
+        public double Valor
         {
             get { return _Valor; }
             set { _Valor = value; }
@@ -47,6 +47,15 @@ namespace Trabalho.Types
         {
             get { return _Data; }
             set { _Data = value; }
+        }
+
+        public string DataFormat
+        {
+            get {
+                //string[] exploded = _Data.Split('-');
+               // return exploded[2] + '/' + exploded[1] + '/' + exploded[0]; 
+                return _Data;
+            }
         }
 
         public string Tipo

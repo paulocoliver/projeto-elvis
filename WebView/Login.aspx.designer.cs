@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trabalho.WebView.Site {
+namespace Trabalho.WebView {
     
     
     public partial class Login {

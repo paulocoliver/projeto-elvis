@@ -125,6 +125,13 @@
     <Compile Include="Painel\Eventos_del.aspx.designer.cs">
       <DependentUpon>Eventos_del.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Painel\Financeiro.aspx.cs">
+      <DependentUpon>Financeiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Financeiro.aspx.designer.cs">
+      <DependentUpon>Financeiro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Painel\PaginaInicial.aspx.cs">
       <DependentUpon>PaginaInicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,6 +166,7 @@
     <Content Include="Painel\Eventos.aspx" />
     <Content Include="Painel\Eventos_add.aspx" />
     <Content Include="Painel\Eventos_del.aspx" />
+    <Content Include="Painel\Financeiro.aspx" />
     <Content Include="Painel\PaginaInicial.aspx" />
     <Content Include="Site\Css\Eventos.css" />
     <Content Include="Site\Css\Login.css" />
