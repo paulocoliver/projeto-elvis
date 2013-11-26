@@ -45,6 +45,7 @@
     <Compile Include="CidadeType.cs" />
     <Compile Include="AssociacaoType.cs" />
     <Compile Include="EventoType.cs" />
+    <Compile Include="PagamentoType.cs" />
     <Compile Include="PaginaInicialType.cs" />
     <Compile Include="QuestionarioOpcaoType.cs" />
     <Compile Include="QuestionarioRespostaType.cs" />

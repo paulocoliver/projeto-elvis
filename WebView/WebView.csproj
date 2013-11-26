@@ -149,6 +149,7 @@
     <Content Include="Img\top-arrow.gif" />
     <Content Include="Js\Evento.js" />
     <Content Include="Js\PaginaInicial.js" />
+    <Content Include="Painel-Empresa\Css\Layou.css" />
     <Content Include="Painel-Empresa\Css\Layout.css" />
     <Content Include="Painel-Empresa\Css\Questionario.css" />
     <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />

@@ -13,7 +13,8 @@ namespace Trabalho.Types
     {
         private int _idPagamento;
         private int _idEmpresa;
-        private float _valor;
+        private double _valor;
+        private string _data;
 
         public int IdPagamento
         {
@@ -27,10 +28,16 @@ namespace Trabalho.Types
             set { _idEmpresa = value; }
         }
 
-        public float Valor
+        public double Valor
         {
             get { return _valor; }
             set { _valor = value; }
+        }
+
+        public string Data
+        {
+            get { return _data; }
+            set { _data = value; }
         }
     }
 }
