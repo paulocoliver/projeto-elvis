@@ -15,3 +15,4 @@ Types/obj/Debug/
 WebView/bin/
 WebView/bin/Debug/
 WebView/obj/Debug/
+DAL_MYSQL/User.cs
