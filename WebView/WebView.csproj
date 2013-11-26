@@ -20,6 +20,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,6 +78,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Painel-Empresa\Efetuar_Pagamento.aspx.cs">
+      <DependentUpon>Efetuar_Pagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Efetuar_Pagamento.aspx.designer.cs">
+      <DependentUpon>Efetuar_Pagamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Painel-Empresa\Informacoes-basicas.aspx.cs">
       <DependentUpon>Informacoes-basicas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +105,13 @@
     </Compile>
     <Compile Include="Painel-Empresa\Pagamento.aspx.designer.cs">
       <DependentUpon>Pagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Empresas_Efetuar_Baixa.aspx.cs">
+      <DependentUpon>Empresas_Efetuar_Baixa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Empresas_Efetuar_Baixa.aspx.designer.cs">
+      <DependentUpon>Empresas_Efetuar_Baixa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Painel\Empresas.aspx.cs">
       <DependentUpon>Empresas.aspx</DependentUpon>
@@ -158,9 +174,11 @@
     <Content Include="Js\PaginaInicial.js" />
     <Content Include="Painel-Empresa\Css\Layout.css" />
     <Content Include="Painel-Empresa\Css\Questionario.css" />
+    <Content Include="Painel-Empresa\Efetuar_Pagamento.aspx" />
     <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />
     <Content Include="Painel-Empresa\Js\Layout.js" />
     <Content Include="Painel-Empresa\Pagamento.aspx" />
+    <Content Include="Painel\Empresas_Efetuar_Baixa.aspx" />
     <Content Include="Painel\Empresas.aspx" />
     <Content Include="Painel\Empresas_view.aspx" />
     <Content Include="Painel\Eventos.aspx" />
@@ -395,6 +413,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

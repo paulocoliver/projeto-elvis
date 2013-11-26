@@ -10,7 +10,7 @@
 namespace Trabalho.WebView.Painel_Empresa {
     
     
-    public partial class Efetuar_Pagamento {
+    public partial class Empresas_Efetuar_Baixa {
         
         /// <summary>
         /// form1 control.

@@ -12,6 +12,10 @@ namespace Trabalho.BLL
     {
         private PagamentoDAL _DAL;
 
+        public void efetuarBaixa(EmpresaType empresa, double valor){
+            _DAL.efetuarBaixa(empresa,valor);
+        }
+
         public PagamentoBLL() {
             _DAL = new PagamentoDAL();
         }

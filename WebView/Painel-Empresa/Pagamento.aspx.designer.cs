@@ -22,6 +22,15 @@ namespace Trabalho.WebView.Painel_Empresa {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
         
         /// <summary>
+        /// lbExpira control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbExpira;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,17 @@ namespace Trabalho.WebView.Painel_Empresa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Trabalho.WebView.Painel_Empresa.Layout.Layout Master {
+            get {
+                return ((Trabalho.WebView.Painel_Empresa.Layout.Layout)(base.Master));
+            }
+        }
     }
 }

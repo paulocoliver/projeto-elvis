@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Painel-Empresa/Layout/Layout.Master" AutoEventWireup="true" CodeBehind="Informacoes-basicas.aspx.cs" Inherits="Trabalho.WebView.Painel_Empresa.Informacoes_basicas" %>
+<%@ MasterType VirtualPath="~/Painel-Empresa/Layout/Layout.Master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
    <link href="/Site/Css/Cadastro.css" rel="stylesheet"/>

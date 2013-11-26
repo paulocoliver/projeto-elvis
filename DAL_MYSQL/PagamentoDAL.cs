@@ -11,6 +11,19 @@ namespace Trabalho.DAL_MYSQL
 {
     public class PagamentoDAL
     {
+        public void efetuarBaixa(EmpresaType empresa, double valor)
+        {
+            PagamentoType pagamento = new PagamentoType();
+            pagamento.IdEmpresa = empresa.IdEmpresa;
+            pagamento.Valor = valor;
+
+            insert(pagamento);
+
+            EmpresaDAL DAL = new EmpresaDAL();
+            empresa.addDays(30);
+            DAL.update(empresa);
+        }
+
         public PagamentoType selectRecord(int idPagamento)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
@@ -25,7 +38,7 @@ namespace Trabalho.DAL_MYSQL
             if (dr.Read())
             {
                 pagamento.IdEmpresa = Int32.Parse(dr["id_empresa"].ToString());
-                pagamento.IdEmpresa = Int32.Parse(dr["id_historico_mensalidade"].ToString());
+                pagamento.IdPagamento = Int32.Parse(dr["id_historico_mensalidade"].ToString());
                 pagamento.Valor = Convert.ToDouble(dr["valor"]);
                 pagamento.Data = dr["data"].ToString();
             }
@@ -49,7 +62,7 @@ namespace Trabalho.DAL_MYSQL
             {
                 PagamentoType pagamento = new PagamentoType();
                 pagamento.IdEmpresa = Int32.Parse(dr["id_empresa"].ToString());
-                pagamento.IdEmpresa = Int32.Parse(dr["id_historico_mensalidade"].ToString());
+                pagamento.IdPagamento = Int32.Parse(dr["id_historico_mensalidade"].ToString());
                 pagamento.Valor = Convert.ToDouble(dr["valor"]);
                 pagamento.Data = dr["data"].ToString();
 

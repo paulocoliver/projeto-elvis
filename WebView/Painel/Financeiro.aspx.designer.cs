@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trabalho.WebView.Painel_Empresa {
+namespace Trabalho.WebView.Painel {
     
     
-    public partial class Questionario {
+    public partial class Financeiro {
         
         /// <summary>
         /// Master property.
@@ -18,9 +18,9 @@ namespace Trabalho.WebView.Painel_Empresa {
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new Trabalho.WebView.Painel_Empresa.Layout.Layout Master {
+        public new Trabalho.WebView.Layout.Layout Master {
             get {
-                return ((Trabalho.WebView.Painel_Empresa.Layout.Layout)(base.Master));
+                return ((Trabalho.WebView.Layout.Layout)(base.Master));
             }
         }
     }

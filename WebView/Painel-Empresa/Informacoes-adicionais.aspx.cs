@@ -12,16 +12,14 @@ namespace Trabalho.WebView.Painel_Empresa
     public partial class Questionario : System.Web.UI.Page
     {
         public QuestionariosType questionarios;
-        private string _idEmpresa;
-        private int _idAssociacao;
+        private EmpresaType _empresa;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _idEmpresa = Session["idEmpresa"].ToString();
-            _idAssociacao = Convert.ToInt32(Session["AssociacaoID"].ToString());
+            _empresa = Master.getEmpresa();
 
             QuestionarioBLL bll = new QuestionarioBLL();
-            questionarios = bll.select(_idAssociacao, _idEmpresa);
+            questionarios = bll.select(_empresa.IdAssociacao, _empresa.IdEmpresa);
 
             if (IsPostBack)
             {
@@ -43,13 +41,13 @@ namespace Trabalho.WebView.Painel_Empresa
                     foreach (string resposta in respostas) {
                         QuestionarioRespostaType questionarioResposta = new QuestionarioRespostaType();
                         questionarioResposta.idQuestionario = questionario.idQuestionario;
-                        questionarioResposta.idEmpresa = Convert.ToInt32(_idEmpresa);
+                        questionarioResposta.idEmpresa = _empresa.IdEmpresa;
                         questionarioResposta.Valor = resposta;
                         questionarioRespostas.Add(questionarioResposta);
                     }
                 }
                 questionario.Respostas = questionarioRespostas;
-                bll.save(questionario, Convert.ToInt32(_idEmpresa));
+                bll.save(questionario, _empresa.IdEmpresa);
             }
         }
 
