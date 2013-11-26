@@ -27,6 +27,13 @@ namespace Trabalho.Types
         private string _Site;
         private string _Logo;
         private string _DataCadastro;
+        private string _DataVencimento;
+
+        public string DataVencimento
+        {
+            get { return _DataVencimento; }
+            set { _DataVencimento = value; }
+        }
 
         public int IdEmpresa
         {

@@ -90,6 +90,13 @@
     <Compile Include="Painel-Empresa\Informacoes-adicionais.aspx.designer.cs">
       <DependentUpon>Informacoes-adicionais.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Painel-Empresa\Pagamento.aspx.cs">
+      <DependentUpon>Pagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel-Empresa\Pagamento.aspx.designer.cs">
+      <DependentUpon>Pagamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Painel\Empresas.aspx.cs">
       <DependentUpon>Empresas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,11 +156,11 @@
     <Content Include="Img\top-arrow.gif" />
     <Content Include="Js\Evento.js" />
     <Content Include="Js\PaginaInicial.js" />
-    <Content Include="Painel-Empresa\Css\Layou.css" />
     <Content Include="Painel-Empresa\Css\Layout.css" />
     <Content Include="Painel-Empresa\Css\Questionario.css" />
     <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />
     <Content Include="Painel-Empresa\Js\Layout.js" />
+    <Content Include="Painel-Empresa\Pagamento.aspx" />
     <Content Include="Painel\Empresas.aspx" />
     <Content Include="Painel\Empresas_view.aspx" />
     <Content Include="Painel\Eventos.aspx" />

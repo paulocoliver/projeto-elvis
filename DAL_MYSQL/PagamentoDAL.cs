@@ -32,65 +32,52 @@ namespace Trabalho.DAL_MYSQL
             return pagamento;
         }
 
-        public EventosType select(int idAssociacao)
+        public PagamentosType select(int idEmpresa)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
 
-            string SQL = "SELECT * FROM evento WHERE id_associacao = @idAssociacao ORDER BY data_ini DESC";
+            string SQL = "SELECT * FROM historico_mensalidade WHERE id_empresa = @idEmpresa ORDER BY data DESC";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-            cmd.Parameters.AddWithValue("@idAssociacao", idAssociacao);
+            cmd.Parameters.AddWithValue("@idEmpresa", idEmpresa);
 
             con.Open();
             MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
-            EventosType eventos = new EventosType();
+            PagamentosType pagamentos = new PagamentosType();
             while (dr.Read())
             {
-                EventoType evento = new EventoType();
-                evento.idEvento = Int32.Parse(dr["id_evento"].ToString());
-                evento.idAssociacao = Int32.Parse(dr["id_associacao"].ToString());
-                evento.Titulo = dr["titulo"].ToString();
-                evento.Descricao = dr["descricao"].ToString();
-                evento.Local = dr["local"].ToString();
-                evento.dataIni = dr["data_ini"].ToString();
-                evento.dataEnd = dr["data_fim"].ToString();
+                PagamentoType pagamento = new PagamentoType();
+                pagamento.IdEmpresa = Int32.Parse(dr["id_empresa"].ToString());
+                pagamento.IdEmpresa = Int32.Parse(dr["id_historico_mensalidade"].ToString());
+                pagamento.Valor = Convert.ToDouble(dr["valor"]);
+                pagamento.Data = dr["data"].ToString();
 
-                eventos.Add(evento);
+                pagamentos.Add(pagamento);
             }
-            return eventos;
+            return pagamentos;
         }
 
-        public int insert(EventoType evento)
+        public int insert(PagamentoType pagamento)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "INSERT INTO evento " +
+            string SQL = "INSERT INTO historico_mensalidade " +
                             "( " +
-                                 "id_associacao, " +
-                                 "titulo, " +
-                                 "descricao, " +
-                                 "local, " +
-                                 "data_ini, " +
-                                 "data_fim " +
+                                 "id_empresa, " +
+                                 "valor, " +
+                                 "data " +
                             ") " +
                          "VALUES " +
                           "( " +
-                                 "@id_associacao, " +
-                                 "@titulo, " +
-                                 "@descricao, " +
-                                 "@local, " +
-                                 "@data_ini, " +
-                                 "@data_fim " +
+                                 "@idEmpresa, " +
+                                 "@valor, " +
+                                 "NOW() " +
                            ")";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
 
-            cmd.Parameters.AddWithValue("@id_associacao", evento.idAssociacao);
-            cmd.Parameters.AddWithValue("@titulo", evento.Titulo);
-            cmd.Parameters.AddWithValue("@descricao", evento.Descricao);
-            cmd.Parameters.AddWithValue("@local", evento.Local);
-            cmd.Parameters.AddWithValue("@data_ini", evento.dataIni);
-            cmd.Parameters.AddWithValue("@data_fim", evento.dataEnd);
+            cmd.Parameters.AddWithValue("@idEmpresa", pagamento.IdEmpresa);
+            cmd.Parameters.AddWithValue("@valor", pagamento.Valor);
 
             try
             {
@@ -105,26 +92,20 @@ namespace Trabalho.DAL_MYSQL
             return Convert.ToInt32(cmd.LastInsertedId);
         }
 
-        public void update(EventoType evento)
+        public void update(PagamentoType pagamento)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "UPDATE evento SET " +
-                              "id_associacao = @id_associacao, " +
-                              "titulo = @titulo, " +
-                              "descricao = @descricao, " +
-                              "local = @local, " +
-                              "data_ini = @data_ini, " +
-                              "data_fim = @data_fim " +
-                           " WHERE id_evento = @id_evento";
+            string SQL = "UPDATE historico_mensalidade SET " +
+                              "id_empresa = @idEmpresa, " +
+                              "valor = @valor, " +
+                              "data = @data, " +
+                           " WHERE id_historico_mensalidade = @idPagamento";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-            cmd.Parameters.AddWithValue("@id_associacao", evento.idAssociacao);
-            cmd.Parameters.AddWithValue("@titulo", evento.Titulo);
-            cmd.Parameters.AddWithValue("@descricao", evento.Descricao);
-            cmd.Parameters.AddWithValue("@local", evento.Local);
-            cmd.Parameters.AddWithValue("@data_ini", evento.dataIni);
-            cmd.Parameters.AddWithValue("@data_fim", evento.dataEnd);
-            cmd.Parameters.AddWithValue("@id_evento", evento.idEvento);
+            cmd.Parameters.AddWithValue("@idEmpresa", pagamento.IdEmpresa);
+            cmd.Parameters.AddWithValue("@valor", pagamento.Valor);
+            cmd.Parameters.AddWithValue("@data", pagamento.Data);
+            cmd.Parameters.AddWithValue("@idPagamento", pagamento.IdPagamento);
 
             try
             {
@@ -137,13 +118,13 @@ namespace Trabalho.DAL_MYSQL
             }
         }
 
-        public void delete(EventoType evento)
+        public void delete(PagamentoType pagamento)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "DELETE FROM evento " +
-                         "WHERE id_evento = @id_evento";
+            string SQL = "DELETE FROM historico_mensalidade " +
+                         "WHERE id_historico_mensalidade = @idPagamento";
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-            cmd.Parameters.AddWithValue("@id_evento", evento.idEvento);
+            cmd.Parameters.AddWithValue("@idPagamento", pagamento.IdPagamento);
             try
             {
                 con.Open();
