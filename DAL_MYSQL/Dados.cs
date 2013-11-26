@@ -12,8 +12,8 @@ namespace Trabalho.DAL_MYSQL
         {
             get
             {
-                return "server=10.0.2.3;User Id=dbuser;Password=dbuser;database=trabalho_db;Port=3307";
-                //return "server=localhost;User Id=root;database=trabalho_db;Convert Zero Datetime=True";
+                //return "server=10.0.2.3;User Id=dbuser;Password=dbuser;database=trabalho_db;Port=3307";
+                return "server=localhost;User Id=root;database=trabalho_db;Convert Zero Datetime=True";
             }
         }
     }

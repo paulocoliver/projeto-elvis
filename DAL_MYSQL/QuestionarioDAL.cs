@@ -31,7 +31,7 @@ namespace Trabalho.DAL_MYSQL
             return type;
         }
 
-        public Types.QuestionariosType select(int id_associacao, string id_empresa)
+        public Types.QuestionariosType select(int id_associacao, int id_empresa)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
              
@@ -52,7 +52,7 @@ namespace Trabalho.DAL_MYSQL
                 type.IdAssociacao = Int32.Parse(dr["id_associacao"].ToString());
                 type.Tipo = dr["tipo"].ToString();
                 type.Descricao = dr["descricao"].ToString();
-                if (id_empresa != null)
+                if (id_empresa > 0)
                 {
                     type.Respostas = dalResposta.select(Convert.ToInt32(id_empresa), type.idQuestionario);
                 }

@@ -27,6 +27,27 @@ namespace Trabalho.Types
         private string _Site;
         private string _Logo;
         private string _DataCadastro;
+        private string _DataVencimento;
+
+        public string DataVencimento
+        {
+            get {
+                DateTime date = DateTime.Parse(_DataVencimento);
+                return date.ToString("yyyy-MM-dd"); 
+            }
+            set { _DataVencimento = value; }
+        }
+
+        public int dateCompare() {
+
+            TimeSpan date = Convert.ToDateTime(_DataVencimento) - Convert.ToDateTime(DateTime.Now);
+            int diff = date.Days;
+
+            if(diff < 0){
+                diff = 0;
+            }
+            return diff;
+        }
 
         public int IdEmpresa
         {
@@ -184,6 +205,15 @@ namespace Trabalho.Types
             {
                  _DataCadastro = value;
             }
+        }
+
+        public void addDays(int days)
+        {
+            days += dateCompare();
+            DateTime date = DateTime.Now;
+            date = date.AddDays(days);
+
+            _DataVencimento = date.ToString("dd/MM/yyyy");
         }
     }
 }

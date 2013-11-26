@@ -31,6 +31,7 @@ namespace Trabalho.DAL_MYSQL
             type.Site = dr["site"].ToString();
             type.Logo = dr["logo"].ToString();
             type.DataCadastro = dr["data_cadastro"].ToString();
+            type.DataVencimento = dr["data_vencimento"].ToString();
 
             return type;
         }
@@ -54,7 +55,8 @@ namespace Trabalho.DAL_MYSQL
                                  "email," +
                                  "senha," +
                                  "site," +
-                                 "logo" +
+                                 "logo," +
+                                 "data_vencimento" +
                             ") " +
                          "VALUES"+
                           "( "+
@@ -70,7 +72,8 @@ namespace Trabalho.DAL_MYSQL
                                  "@email," +
                                  "@senha," +
                                  "@site," +
-                                 "@logo" +
+                                 "@logo," +
+                                 "NOW()" +
                            ")";
 
             cmd = new MySqlCommand(SQL, con);
@@ -88,7 +91,7 @@ namespace Trabalho.DAL_MYSQL
             cmd.Parameters.AddWithValue("@senha", empresa.Senha);
             cmd.Parameters.AddWithValue("@site", empresa.Site);
             cmd.Parameters.AddWithValue("@logo", empresa.Logo);
-            
+ 
             try
             {
                 con.Open();
@@ -119,8 +122,9 @@ namespace Trabalho.DAL_MYSQL
                                  "complemento = @complemento," +
                                  "email = @email," +
                                  "senha = @senha," +
-                                 "site = @site," +
-                                 "logo = @logo" +
+                                 "site = @site, " +
+                                 "logo = @logo, " +
+                                 "data_vencimento = @data_vencimento" +
                             " WHERE id_empresa = @id_empresa";
 
             cmd = new MySqlCommand(SQL, con);
@@ -138,6 +142,7 @@ namespace Trabalho.DAL_MYSQL
             cmd.Parameters.AddWithValue("@senha", empresa.Senha);
             cmd.Parameters.AddWithValue("@site", empresa.Site);
             cmd.Parameters.AddWithValue("@logo", empresa.Logo);
+            cmd.Parameters.AddWithValue("@data_vencimento", empresa.DataVencimento);
             cmd.Parameters.AddWithValue("@id_empresa", empresa.IdEmpresa);
 
             try{

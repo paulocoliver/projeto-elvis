@@ -13,9 +13,14 @@
             <asp:BoundField DataField="RazaoSocial" HeaderText="Razão Social" />
             <asp:BoundField DataField="Nome" HeaderText="Nome Fantasia" />
             <asp:BoundField DataField="DataCadastro" HeaderText="Data Cadastro" />
+            <asp:BoundField DataField="DataVencimento" HeaderText="Data Vencimento" />
             <asp:HyperLinkField DataNavigateUrlFields="idEmpresa" DataNavigateUrlFormatString="Empresas_view.aspx?id={0}" DataTextField="idEmpresa" DataTextFormatString="&lt;span class=&quot;glyphicon glyphicon-zoom-in&quot;&gt;&lt;/span&gt;" HeaderText="Detalhes">
             <ControlStyle CssClass="btn btn-info" />
             <ItemStyle CssClass="text-center" />
+            </asp:HyperLinkField>
+            <asp:HyperLinkField DataNavigateUrlFields="idEmpresa" DataNavigateUrlFormatString="Empresas_efetuar_baixa.aspx?id={0}" DataTextField="idEmpresa" DataTextFormatString="&lt;span class=&quot;glyphicon glyphicon-download-alt&quot;&gt;&lt;/span&gt;" HeaderText="Efetuar Baixa" >
+                <ControlStyle CssClass="btn btn-success" />
+                <ItemStyle CssClass="text-center" />
             </asp:HyperLinkField>
         </Columns>
     </asp:GridView>

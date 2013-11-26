@@ -46,6 +46,7 @@
     <Compile Include="AssociacaoBLL.cs" />
     <Compile Include="FinanceiroBLL.cs" />
     <Compile Include="EventoBLL.cs" />
+    <Compile Include="PagamentoBLL.cs" />
     <Compile Include="PaginaInicialBLL.cs" />
     <Compile Include="QuestionarioOpcaoBLL.cs" />
     <Compile Include="QuestionarioBLL.cs" />

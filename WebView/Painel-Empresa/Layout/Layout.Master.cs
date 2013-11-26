@@ -13,13 +13,31 @@ namespace Trabalho.WebView.Painel_Empresa.Layout
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["AssociacaoID"] = 1;
             Session["idEmpresa"] = 7;
-
             if(Session["idEmpresa"] == null)
             {
                 Response.Redirect("/Site/Default.aspx");
             }
+        }
+
+        public int SessionEmpresa
+        {
+            get {
+                if (Session["idEmpresa"] == null) {
+                    Session["idEmpresa"] = 7;
+                }
+                return Int32.Parse(Session["idEmpresa"].ToString()); 
+            }
+            set { Session["idEmpresa"] = value; }
+        }
+
+        public EmpresaType getEmpresa()
+        {
+            if (SessionEmpresa == 0)
+                Response.Redirect("/Site/Login.aspx");
+
+            EmpresaBLL BLL = new EmpresaBLL();
+            return BLL.selectRecord(SessionEmpresa);
         }
     }
 }

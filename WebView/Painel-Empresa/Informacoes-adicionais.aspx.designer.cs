@@ -11,5 +11,17 @@ namespace Trabalho.WebView.Painel_Empresa {
     
     
     public partial class Questionario {
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Trabalho.WebView.Painel_Empresa.Layout.Layout Master {
+            get {
+                return ((Trabalho.WebView.Painel_Empresa.Layout.Layout)(base.Master));
+            }
+        }
     }
 }
