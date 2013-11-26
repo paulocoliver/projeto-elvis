@@ -90,6 +90,20 @@
     <Compile Include="Painel-Empresa\Informacoes-adicionais.aspx.designer.cs">
       <DependentUpon>Informacoes-adicionais.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Painel\Empresas.aspx.cs">
+      <DependentUpon>Empresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Empresas.aspx.designer.cs">
+      <DependentUpon>Empresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel\Empresas_view.aspx.cs">
+      <DependentUpon>Empresas_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel\Empresas_view.aspx.designer.cs">
+      <DependentUpon>Empresas_view.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Painel\Eventos.aspx.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +153,8 @@
     <Content Include="Painel-Empresa\Css\Questionario.css" />
     <Content Include="Painel-Empresa\Informacoes-basicas.aspx" />
     <Content Include="Painel-Empresa\Js\Layout.js" />
+    <Content Include="Painel\Empresas.aspx" />
+    <Content Include="Painel\Empresas_view.aspx" />
     <Content Include="Painel\Eventos.aspx" />
     <Content Include="Painel\Eventos_add.aspx" />
     <Content Include="Painel\Eventos_del.aspx" />

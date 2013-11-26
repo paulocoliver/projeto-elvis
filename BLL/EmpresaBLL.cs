@@ -10,6 +10,13 @@ namespace Trabalho.BLL
 {
     public class EmpresaBLL
     {
+        EmpresaDAL DAL;
+
+        public EmpresaBLL()
+        {
+            DAL = new EmpresaDAL();
+        }
+
         public int insert(Types.EmpresaType empresa)
         {
             EmpresaDAL dal = new EmpresaDAL();
@@ -34,6 +41,21 @@ namespace Trabalho.BLL
             EmpresaType empresa = dal.selectRecord(id_empresa);
 
             return empresa;
+        }
+
+        public Types.EmpresasType select()
+        {
+            return DAL.select();
+        }
+
+        public Types.EmpresasType selectByAssociacao(Types.AssociacaoType associacao)
+        {
+            return DAL.selectByAssociacao(associacao);
+        }
+
+        public void delete(Types.EmpresaType obj)
+        {
+            DAL.delete(obj);
         }
     }
 }

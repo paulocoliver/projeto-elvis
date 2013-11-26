@@ -16,5 +16,20 @@ namespace Trabalho.WebView.Layout
                 Response.Redirect("~/Login.aspx");
 
         }
+
+        public int SessionAssociacaoId
+        {
+            get { return Int32.Parse(Session["AssociacaoID"].ToString()); }
+            set { Session["AssociacaoID"] = value; }
+        }
+
+        public Types.AssociacaoType getAssociacaoSession()
+        {
+            if (SessionAssociacaoId == 0)
+                Response.Redirect("~/Login.aspx");
+
+            BLL.AssociacaoBLL AssocBLL = new BLL.AssociacaoBLL();
+            return AssocBLL.selectRecord(SessionAssociacaoId);
+        }
     }
 }

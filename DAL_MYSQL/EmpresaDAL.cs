@@ -11,6 +11,30 @@ namespace Trabalho.DAL_MYSQL
 {
     public class EmpresaDAL
     {
+        public Types.EmpresaType execReader(MySqlDataReader dr)
+        {
+            EmpresaType type = new EmpresaType();
+
+            type.IdEmpresa = Int32.Parse(dr["id_empresa"].ToString());
+            type.IdAssociacao = Int32.Parse(dr["id_associacao"].ToString());
+            type.IdCidade = Int32.Parse(dr["id_cidade"].ToString());
+            //type.IdPlano = Int32.Parse(dr["id_plano"].ToString());
+            type.RazaoSocial = dr["razao_social"].ToString();
+            type.Senha = dr["senha"].ToString();
+            type.Nome = dr["nome_fantasia"].ToString();
+            type.CNPJ = dr["cnpj"].ToString();
+            type.IE = dr["ie"].ToString();
+            type.CEP = dr["cep"].ToString();
+            type.Endereco = dr["endereco"].ToString();
+            type.Complemento = dr["complemento"].ToString();
+            type.Email = dr["email"].ToString();
+            type.Site = dr["site"].ToString();
+            type.Logo = dr["logo"].ToString();
+            type.DataCadastro = dr["data_cadastro"].ToString();
+
+            return type;
+        }
+
         public int insert(Types.EmpresaType empresa)
         {
             MySqlCommand cmd;
@@ -151,38 +175,50 @@ namespace Trabalho.DAL_MYSQL
             return empresa;
         }
 
-        public EmpresaType selectRecord(int id_empresa) {
-
+        public EmpresaType selectRecord(int id)
+        {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-
             string SQL = "SELECT * FROM empresa " +
-                         "WHERE id_empresa = @id_empresa";
+                         "WHERE id_empresa = @id";
             MySqlCommand cmd = new MySqlCommand(SQL, con);
-
-            cmd.Parameters.AddWithValue("@id_empresa", id_empresa);
+            cmd.Parameters.AddWithValue("@id", id);
             con.Open();
-
             MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            EmpresaType empresa = new EmpresaType();
 
+            EmpresaType type = new EmpresaType();
             if (dr.Read())
             {
-                empresa.IdAssociacao = Convert.ToInt32(dr["id_associacao"].ToString());
-                empresa.IdEmpresa    = Convert.ToInt32(dr["id_empresa"].ToString());
-                empresa.IdCidade = Convert.ToInt32(dr["id_cidade"].ToString());
-                empresa.IE = dr["ie"].ToString();
-                empresa.Logo = dr["logo"].ToString();
-                empresa.Nome = dr["nome_fantasia"].ToString();
-                empresa.RazaoSocial = dr["razao_social"].ToString();
-                empresa.Senha = dr["senha"].ToString();
-                empresa.Site = dr["site"].ToString();
-                empresa.Complemento = dr["complemento"].ToString();
-                empresa.Email = dr["email"].ToString();
-                empresa.Endereco = dr["endereco"].ToString();
-                empresa.CEP = dr["cep"].ToString();
-                empresa.CNPJ = dr["cnpj"].ToString();
+                type = execReader(dr);
             }
-            return empresa;
+            return type;
+        }
+
+        public EmpresasType select()
+        {
+            EmpresasType types = new EmpresasType();
+            return types;
+        }
+
+        public EmpresasType selectByAssociacao(AssociacaoType associacao)
+        {
+            EmpresasType types = new EmpresasType();
+
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "SELECT * FROM empresa " +
+                         "WHERE id_associacao = @id";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id", associacao.IdAssociacao);
+            con.Open();
+            MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            while (dr.Read())
+            {
+                types.Add(execReader(dr));
+            }
+            return types;
+        }
+
+        public void delete(Types.EmpresaType type)
+        {
         }
     }
 }

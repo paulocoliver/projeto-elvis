@@ -20,5 +20,11 @@ namespace Trabalho.BLL
             AssociacaoDAL assocDAL = new AssociacaoDAL();
             return assocDAL.insert(obj);
         }
+
+        public Types.AssociacaoType selectRecord(int id)
+        {
+            AssociacaoDAL assocDAL = new AssociacaoDAL();
+            return assocDAL.selectRecord(id);
+        }
     }
 }
