@@ -48,7 +48,8 @@ namespace Trabalho.DAL_MYSQL
             string SQL = "SELECT * FROM financeiro " +
                          "WHERE id_associacao = @id " +
                          "AND YEAR(financeiro.`data`) = @ano " +
-                         "AND MONTH(financeiro.`data`) = @mes";
+                         "AND MONTH(financeiro.`data`) = @mes " +
+                         "ORDER BY `data`, `id_financeiro`";
             MySqlCommand cmd = new MySqlCommand(SQL, con);
             cmd.Parameters.AddWithValue("@id", assoc.IdAssociacao);
             cmd.Parameters.AddWithValue("@ano", ano);
@@ -125,6 +126,49 @@ namespace Trabalho.DAL_MYSQL
                 con.Close();
             }
             return id;
+        }
+
+        public void update(FinanceiroType type)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "UPDATE financeiro " +
+                         "SET id_associacao = @id_associacao, titulo = @titulo, valor = @valor, data = @data, tipo = @tipo " +
+                         "WHERE id_financeiro = @id_financeiro";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id_financeiro", type.IdFinanceiro);
+            cmd.Parameters.AddWithValue("@id_associacao", type.IdAssociacao);
+            cmd.Parameters.AddWithValue("@titulo", type.Titulo);
+            cmd.Parameters.AddWithValue("@valor", type.Valor);
+            cmd.Parameters.AddWithValue("@data", type.Data);
+            cmd.Parameters.AddWithValue("@tipo", type.Tipo);
+            
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void delete(FinanceiroType type)
+        {
+            MySqlConnection con = new MySqlConnection(Dados.StringConexao);
+            string SQL = "DELETE FROM financeiro " +
+                         "WHERE id_financeiro = @id";
+            MySqlCommand cmd = new MySqlCommand(SQL, con);
+            cmd.Parameters.AddWithValue("@id", type.IdFinanceiro);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

@@ -45,16 +45,17 @@ namespace Trabalho.Types
 
         public string Data
         {
-            get { return _Data; }
+            get { return _Data = _Data.Replace(" 00:00:00", "");}
             set { _Data = value; }
         }
 
-        public string DataFormat
+
+        public string DataFormatSql
         {
             get {
-                //string[] exploded = _Data.Split('-');
-               // return exploded[2] + '/' + exploded[1] + '/' + exploded[0]; 
-                return _Data;
+                
+                string[] exploded = Data.Split('/');
+                return exploded[2] + '-' + exploded[1] + '-' + exploded[0]; 
             }
         }
 

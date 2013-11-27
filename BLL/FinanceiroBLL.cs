@@ -37,6 +37,15 @@ namespace Trabalho.BLL
             return DAL.insert(obj);
         }
 
+        public void update(FinanceiroType obj)
+        {
+            DAL.update(obj);
+        }
+
+        public void delete(FinanceiroType obj)
+        {
+            DAL.delete(obj);
+        }
         
     }
 }

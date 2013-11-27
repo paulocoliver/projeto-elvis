@@ -11,6 +11,7 @@ namespace Trabalho.WebView
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Redirect("~/Painel/Empresas.aspx");
         }
     }
 }

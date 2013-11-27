@@ -18,7 +18,7 @@ namespace Trabalho.WebView.Painel
 
             try
             {
-                if (id != null && id > 0)
+                if ( id > 0)
                 {
                     BLL.EmpresaBLL BLL = new BLL.EmpresaBLL();
                     DadosEmpresa = BLL.selectRecord(id);
@@ -26,6 +26,8 @@ namespace Trabalho.WebView.Painel
                         throw new Exception("IdAssociacao invalido");
 
                     BLL.QuestionarioBLL QuestBLL = new BLL.QuestionarioBLL();
+                    BLL.QuestionarioRespostaBLL RespBLL = new BLL.QuestionarioRespostaBLL();
+                    //RespBLL.
                     //RespostasQuestionario = QuestBLL.selectRespostasByEmpresa(DadosEmpresa.IdAssociacao, DadosEmpresa.IdEmpresa);
                 }
                 else

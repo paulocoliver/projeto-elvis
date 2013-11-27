@@ -6,7 +6,6 @@
 <head id="Head1" runat="server">
     <title></title>
     <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/> 
-    <link type="text/css" rel="stylesheet" href="../Css/Layout.css" />
     <link type="text/css" rel="stylesheet" href="../Css/animate/animate.min.css" />
     <script type="text/javascript" src="../Js/jQuery-1.9.1.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
@@ -18,7 +17,7 @@
 
 <body>
     <form id="form1" runat="server" class="validateForm">
-        <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,12 +30,11 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="../Default.aspx">Home</a></li>
-                        <li><a href="/Painel/PaginaInicial.aspx">Conteúdo da Inicial</a></li>
                         <li><a href="/Painel/Empresas.aspx">Empresas</a></li>
-                        <li><a href="/Painel/Questionario.aspx">Questionário empresa</a></li>
+                        <li><a href="/Painel/Questionario.aspx">Questionário empresas</a></li>
                         <li><a href="../Painel/Financeiro.aspx">Financeiro</a></li>
                         <li><a href="/Painel/Eventos.aspx">Eventos</a></li>
+                        <li><a href="/Painel/PaginaInicial.aspx">Conteúdo da Inicial</a></li>
                     </ul>
                 </div>
             </div>
