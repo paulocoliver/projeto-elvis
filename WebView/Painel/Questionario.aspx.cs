@@ -14,7 +14,7 @@ namespace Trabalho.WebView.Empresa
         protected void Page_Load(object sender, EventArgs e)
         {
             QuestionarioBLL questBLL = new QuestionarioBLL();
-            GridView1.DataSource = questBLL.select(1, 0);
+            GridView1.DataSource = questBLL.select(Master.getAssociacaoSession().IdAssociacao, 0);
             GridView1.DataBind();
         }
 

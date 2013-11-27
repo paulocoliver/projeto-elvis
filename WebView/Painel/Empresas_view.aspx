@@ -84,19 +84,26 @@
     </div>
 
     <%
-    /*foreach (Trabalho.Types.QuestionarioRespostaType resposta in RespostasQuestionario)
+    foreach (Trabalho.Types.QuestionarioType questionario in RespostasQuestionario)
     {
-    
+    %>
     <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><%= resposta.Pergunta </h3>
+          <h3 class="panel-title"><%= questionario.Descricao %> </h3>
         </div>
         <div class="panel-body">
-          <%= resposta.Resposta.Replace("\n", "<br />") 
+            <%
+            foreach (Trabalho.Types.QuestionarioRespostaType resposta in questionario.Respostas)
+            {
+            %>
+                <%= resposta.Valor.Replace("\n", "<br />") %><br/>
+            <%
+            }
+            %>
         </div>
       </div>
-    
-    }*/
+    <%
+    }
     %>
 
 

@@ -10,7 +10,7 @@ namespace Trabalho.WebView.Painel
     public partial class Empresas_view : System.Web.UI.Page
     {
         private Types.EmpresaType _DadosEmpresa;
-        private Types.QuestionarioRespostasType _RespostasQuestionario;
+        private Types.QuestionariosType _RespostasQuestionario;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,20 +26,18 @@ namespace Trabalho.WebView.Painel
                         throw new Exception("IdAssociacao invalido");
 
                     BLL.QuestionarioBLL QuestBLL = new BLL.QuestionarioBLL();
-                    BLL.QuestionarioRespostaBLL RespBLL = new BLL.QuestionarioRespostaBLL();
-                    //RespBLL.
-                    //RespostasQuestionario = QuestBLL.selectRespostasByEmpresa(DadosEmpresa.IdAssociacao, DadosEmpresa.IdEmpresa);
+                    RespostasQuestionario = QuestBLL.select(DadosEmpresa.IdAssociacao, DadosEmpresa.IdEmpresa);
                 }
                 else
                 {
-
+                    throw new Exception("No id");
                 }
             }
             catch (Exception)
             {
                 Session["FlashMsg"] = "Ocorreu um erro";
                 Session["FlashMsgType"] = "danger";
-                Response.Redirect("~/Empresa/List.aspx");
+                Response.Redirect("~/Painel/Empresas.aspx");
             }
 
             this.DataBind();
@@ -51,7 +49,7 @@ namespace Trabalho.WebView.Painel
             set { _DadosEmpresa = value; }
         }
 
-        public Types.QuestionarioRespostasType RespostasQuestionario
+        public Types.QuestionariosType RespostasQuestionario
         {
             get { return _RespostasQuestionario; }
             set { _RespostasQuestionario = value; }

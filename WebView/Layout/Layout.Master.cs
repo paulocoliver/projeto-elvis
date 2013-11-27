@@ -13,7 +13,7 @@ namespace Trabalho.WebView.Layout
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["AssociacaoID"] = 1;
+            //Session["AssociacaoID"] = 1;
             VerificaSession();
 
         }

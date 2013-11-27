@@ -31,8 +31,8 @@
             <label class="col-sm-2 control-label">Tipo</label>
             <div class="col-sm-5">
                 <asp:RadioButtonList ID="RdoTipo" runat="server">
-                    <asp:ListItem Value="receita">Receita</asp:ListItem>
-                    <asp:ListItem Value="despesa">Despesa</asp:ListItem>
+                    <asp:ListItem Value="receita" Selected="True"> Receita</asp:ListItem>
+                    <asp:ListItem Value="despesa"> Despesa</asp:ListItem>
                 </asp:RadioButtonList>
             </div>
         </div>

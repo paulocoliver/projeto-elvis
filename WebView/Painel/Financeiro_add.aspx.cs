@@ -22,7 +22,6 @@ namespace Trabalho.WebView.Painel
 
             int id = Convert.ToInt32(Request.QueryString["id"]);
             financBLL = new FinanceiroBLL();
-
             if (id > 0)
             {
                 _TitlePage = "Editar";

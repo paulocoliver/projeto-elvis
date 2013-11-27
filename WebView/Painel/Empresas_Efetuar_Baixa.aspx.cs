@@ -18,8 +18,8 @@ namespace Trabalho.WebView.Painel_Empresa
 
             if (Session["AssociacaoID"] == null)
             {
-                idAssociacao = 7;
-                //Response.Redirect("~/Login.aspx");
+                idAssociacao = 0;
+                Response.Redirect("~/Login.aspx");
             }
             else {
                 idAssociacao = Convert.ToInt32(Session["AssociacaoID"]);

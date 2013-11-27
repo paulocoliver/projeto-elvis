@@ -38,7 +38,7 @@
         </div>
         <asp:Button ID="Button1" runat="server" Text="OK" CssClass="btn btn-info" PostBackUrl="~/Painel/Financeiro.aspx" Width="100px" />
        
-        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-info" PostBackUrl="~/Painel/Financeiro_add.aspx"><i class="glyphicon glyphicon-plus-sign"></i> Adicionar</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-info pull-right" PostBackUrl="~/Painel/Financeiro_add.aspx"><i class="glyphicon glyphicon-plus-sign"></i> Adicionar</asp:LinkButton>
     </div>
 
     

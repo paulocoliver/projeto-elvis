@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Questionario empresa" Language="C#" MasterPageFile="~/Layout/Layout.Master" AutoEventWireup="true" CodeBehind="Questionario.aspx.cs" Inherits="Trabalho.WebView.Empresa.Questionario" %>
+<%@ MasterType VirtualPath="~/Layout/Layout.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
