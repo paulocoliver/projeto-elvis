@@ -56,6 +56,7 @@ namespace Trabalho.DAL_MYSQL
                                  "senha," +
                                  "site," +
                                  "logo," +
+                                 "data_cadastro," +
                                  "data_vencimento" +
                             ") " +
                          "VALUES"+
@@ -73,6 +74,7 @@ namespace Trabalho.DAL_MYSQL
                                  "@senha," +
                                  "@site," +
                                  "@logo," +
+                                 "NOW()," +
                                  "NOW()" +
                            ")";
 

@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login Associação</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/> 
     <link rel="stylesheet" href="Css/Login.css"/>
 </head>
 <body>
     <div class="container">
-        <form id="form1" runat="server" class="form-signin">
+        <form id="form1" runat="server" class="form-signin validateForm">
             <h2 class="form-signin-heading">Login Associação</h2>
         
             <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Usuario"></asp:TextBox>
@@ -23,8 +23,12 @@
         </form>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="../Js/jQuery-1.9.1.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Js/validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="../Js/validation/localization/messages_pt_BR.js"></script>
+    <script type="text/javascript">
+    $(".validateForm").validate();
+    </script>
 </body>
 </html>

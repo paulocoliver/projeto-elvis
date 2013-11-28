@@ -13,10 +13,10 @@ namespace Trabalho.WebView.Painel_Empresa.Layout
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["idEmpresa"] = 7;
+            //Session["idEmpresa"] = 7;
             if(Session["idEmpresa"] == null)
             {
-                Response.Redirect("/Site/Default.aspx");
+                Response.Redirect("/Site/Login.aspx");
             }
         }
 
@@ -24,7 +24,7 @@ namespace Trabalho.WebView.Painel_Empresa.Layout
         {
             get {
                 if (Session["idEmpresa"] == null) {
-                    Session["idEmpresa"] = 7;
+                    Response.Redirect("/Site/Login.aspx");
                 }
                 return Int32.Parse(Session["idEmpresa"].ToString()); 
             }

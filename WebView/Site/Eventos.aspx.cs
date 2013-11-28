@@ -16,7 +16,7 @@ namespace Trabalho.WebView.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             EventoBLL bll = new EventoBLL();
-            eventos = bll.select(1);
+            eventos = bll.select(Master.AssociacaoIdCookie);
         }
     }
 }

@@ -50,8 +50,8 @@
             <th style="width: 100px;"></th>
         </tr>
         <tr>
-            <td colspan="2" class="text-right">Saldo do mês anterior</td>
-            <td  colspan="2">
+            <th colspan="2" class="text-right">Saldo do mês anterior</th>
+            <th  colspan="2">
                 <%
                 string labelTipo = "default";
                 if (saldoAnterior < 0)
@@ -59,8 +59,8 @@
                 else if(saldoAnterior > 0)
                     labelTipo = "success";
                 %>
-                <strong class="label label-<%= labelTipo %>"><%= saldoAnterior.ToString("00.00") %></strong>
-            </td>
+                <h3 style="margin: 0;"><span class="label label-<%= labelTipo %>"><%= saldoAnterior.ToString("00.00") %></span></h3>
+            </th>
         </tr>
         <%
         foreach (Trabalho.Types.FinanceiroType res in DadosFinanceiros)
@@ -87,8 +87,8 @@
         %>
 
         <tr>
-            <td colspan="2" class="text-right">Saldo do mês</td>
-            <td>
+            <th colspan="2" class="text-right">Saldo do mês</th>
+            <th colspan="2">
                 <%
                 labelTipo = "default";
                 if (saldoAnterior < 0)
@@ -96,8 +96,8 @@
                 else if (saldoAnterior > 0)
                     labelTipo = "success";  
                 %>
-                <strong class="label label-<%= labelTipo %>"><%= saldoAnterior.ToString("00.00") %></strong>
-            </td>
+                <h3 style="margin: 0;"><span class="label label-<%= labelTipo %>"><%= saldoAnterior.ToString("00.00") %></span></h3>
+            </th>
            
         </tr>
     </table>

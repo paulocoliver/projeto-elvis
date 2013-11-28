@@ -54,7 +54,7 @@ namespace Trabalho.WebView.Site
         public EmpresaType save()
         {
             EmpresaType empresa = new EmpresaType();
-            empresa.IdAssociacao = Convert.ToInt32(Session["AssociacaoID"]);
+            empresa.IdAssociacao = Master.AssociacaoIdCookie;
             empresa.IdCidade = Convert.ToInt32(txtCidade.Text);
             empresa.RazaoSocial = txtRazaoSocial.Text;
             empresa.Senha = txtSenha.Text;
@@ -66,6 +66,7 @@ namespace Trabalho.WebView.Site
             empresa.Complemento = txtComplemento.Text;
             empresa.Email = txtEmail.Text;
             empresa.Site = txtSite.Text;
+           
 
             EmpresaBLL bll = new EmpresaBLL();
             empresa.IdEmpresa = bll.insert(empresa);

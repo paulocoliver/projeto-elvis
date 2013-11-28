@@ -15,10 +15,19 @@ namespace Trabalho.WebView.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            PaginaInicialBLL bll = new PaginaInicialBLL();
-            PaginaInicialType pagina = bll.select(1);
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            if (id > 0)
+            {
+                HttpCookie cookie = new HttpCookie("assocCookie");
+                cookie.Value = id.ToString();
+                Response.Cookies.Add(cookie);
+                Response.Redirect("~/Site/Default.aspx");
+            }
 
-            texto = pagina.Texto;
+            PaginaInicialBLL bll = new PaginaInicialBLL();
+            PaginaInicialType pagina = bll.select(Master.AssociacaoIdCookie);
+
+           texto = pagina.Texto;
         }
     }
 }

@@ -68,10 +68,10 @@ namespace Trabalho.WebView.Painel
             {
                 financ.IdAssociacao = Master.SessionAssociacaoId;
                 financ.Titulo = txtTitulo.Text;
-                financ.Valor = Double.Parse(txtValor.Text);
+                financ.Valor = Convert.ToDouble(txtValor.Text);
                 financ.Data = txtData.Text;
                 financ.Tipo = RdoTipo.SelectedValue;
-                
+                                
                 if ((financ.Tipo == "despesa" && financ.Valor > 0) || financ.Tipo == "receita" && financ.Valor < 0)
                 {
                     financ.Valor = financ.Valor * -1;

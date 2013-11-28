@@ -11,6 +11,7 @@
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Js/validation/jquery.validate.js"></script>
     <script type="text/javascript" src="../Js/validation/localization/messages_pt_BR.js"></script>
+    <script type="text/javascript" src="http://plentz.github.io/jquery-maskmoney/javascripts/jquery.maskMoney.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>     
 </head>
@@ -35,6 +36,9 @@
                         <li><a href="../Painel/Financeiro.aspx">Financeiro</a></li>
                         <li><a href="/Painel/Eventos.aspx">Eventos</a></li>
                         <li><a href="/Painel/PaginaInicial.aspx">Conteúdo da Inicial</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../Site/Default.aspx?id=<%= SessionAssociacaoId %>"  target="_blank">Ver meu site</a></li>
                     </ul>
                 </div>
             </div>

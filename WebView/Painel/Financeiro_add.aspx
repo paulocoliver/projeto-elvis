@@ -18,7 +18,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Valor</label>
             <div class="col-sm-5">
-                <asp:TextBox ID="txtValor" type="number" runat="server" class="form-control" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtValor" runat="server" class="form-control mask-money" required="required"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
@@ -42,4 +42,10 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".mask-money").maskMoney({ thousands: '', decimal: ',' });
+        });
+    </script>
+
 </asp:Content>

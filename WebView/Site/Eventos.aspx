@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/Layout/Layout.Master" AutoEventWireup="true" CodeBehind="Eventos.aspx.cs" Inherits="Trabalho.WebView.Site.Eventos" %>
+<%@ MasterType VirtualPath="~/Site/Layout/Layout.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/Site/Css/Eventos.css" rel="stylesheet"/>
 </asp:Content>

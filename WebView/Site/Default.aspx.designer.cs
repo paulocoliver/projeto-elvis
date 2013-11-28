@@ -11,5 +11,17 @@ namespace Trabalho.WebView.Site {
     
     
     public partial class Default {
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Trabalho.WebView.Assoc.Layout.Layout Master {
+            get {
+                return ((Trabalho.WebView.Assoc.Layout.Layout)(base.Master));
+            }
+        }
     }
 }

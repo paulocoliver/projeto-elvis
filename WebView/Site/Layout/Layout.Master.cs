@@ -11,11 +11,25 @@ namespace Trabalho.WebView.Assoc.Layout
     {
         public bool autenticado;
 
+        public int assocCookie;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           Session["AssociacaoID"] = 1;
-
+           //Session["AssociacaoID"] = 1;
            autenticado = (Session["idEmpresa"] == null ? false : true );
+        }
+
+        public int AssociacaoIdCookie
+        {
+            get
+            {
+                assocCookie = int.Parse(Request.Cookies["assocCookie"].Value);
+                if (assocCookie == null || assocCookie == 0)
+                {
+                    assocCookie = 1;
+                }
+                return assocCookie;
+            }
         }
     }
 }
