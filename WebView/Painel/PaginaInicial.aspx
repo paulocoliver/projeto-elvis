@@ -1,4 +1,5 @@
 ﻿<%@ Page ValidateRequest="false" Title="" Language="C#" MasterPageFile="~/Layout/Layout.Master" AutoEventWireup="true" CodeBehind="PaginaInicial.aspx.cs" Inherits="Trabalho.WebView.Painel.PaginaInicial" %>
+<%@ MasterType VirtualPath="~/Layout/Layout.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="/Js/ckeditor/ckeditor.js"></script>
     <script src="/Js/ckeditor/adapters/jquery.js"></script>

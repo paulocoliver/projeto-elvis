@@ -56,5 +56,17 @@ namespace Trabalho.WebView.Painel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSalvar;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Trabalho.WebView.Layout.Layout Master {
+            get {
+                return ((Trabalho.WebView.Layout.Layout)(base.Master));
+            }
+        }
     }
 }

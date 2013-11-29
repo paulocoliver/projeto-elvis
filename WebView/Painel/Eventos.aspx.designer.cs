@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebView.Painel {
+namespace Trabalho.WebView.Painel {
     
     
     public partial class Eventos {
@@ -31,12 +31,15 @@ namespace WebView.Painel {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// ObjectDataSource1 control.
+        /// Master property.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated property.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        public new Trabalho.WebView.Layout.Layout Master {
+            get {
+                return ((Trabalho.WebView.Layout.Layout)(base.Master));
+            }
+        }
     }
 }

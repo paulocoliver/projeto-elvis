@@ -25,7 +25,6 @@
                     <asp:ListItem Value="Radio_S">Radio</asp:ListItem>
                     <asp:ListItem Value="Email_N">Email</asp:ListItem>
                     <asp:ListItem Value="URL_N">URL</asp:ListItem>
-                    <asp:ListItem Value="File_N">File</asp:ListItem>
                     <asp:ListItem Value="Date_N">Date</asp:ListItem>
                     <asp:ListItem Value="Time_N">Time</asp:ListItem>
                     <asp:ListItem Value="Color_N">Color</asp:ListItem>

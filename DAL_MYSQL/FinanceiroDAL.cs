@@ -66,7 +66,7 @@ namespace Trabalho.DAL_MYSQL
         public double selectSaldoAnterior(AssociacaoType assoc, string ano, string mes)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
-            string SQL = "SELECT SUM(valor) AS saldo FROM financeiro " +
+            string SQL = "SELECT IFNULL(SUM(valor), 0) AS saldo FROM financeiro " +
                          "WHERE id_associacao = @id "+
                          "AND financeiro.`data` < @data";
             MySqlCommand cmd = new MySqlCommand(SQL, con);

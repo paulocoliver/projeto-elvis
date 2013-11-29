@@ -34,11 +34,11 @@
 
                         <li><a href="/Site/Default.aspx">Home</a></li>
                         <li><a href="/Site/eventos.aspx">Eventos</a></li>
-
                         <% if(autenticado){ %>         
                             <li><a href="/Painel-Empresa/Default.aspx">Meu Painel</a></li>                             
                          <%}else{ %>                             
-                             <li><a href="/Site/Login.aspx">Cadastrar-se / Logar</a></li>                                      
+                            <li><a href="/Site/Cadastrar.aspx">Cadastrar minha empresa</a></li>
+                            <li><a href="/Site/Login.aspx">Login empresa</a></li>                                       
                          <%} %>
                     </ul>
                 </div>

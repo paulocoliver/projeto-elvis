@@ -12,13 +12,13 @@
    <div class="container">
         <form id="form1" runat="server" class="form-signin validateForm">
             <h2 class="form-signin-heading">Cadastrar Associação</h2>
-            <asp:TextBox ID="txtNome" runat="server" class="form-control" placeholder="Nome da Associação"></asp:TextBox>
+            <asp:TextBox ID="txtNome" runat="server" class="form-control" placeholder="Nome da Associação" required="required"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtUrl" runat="server" class="form-control" placeholder="URL"></asp:TextBox>
+            <asp:TextBox ID="txtUrl" runat="server" class="form-control" placeholder="URL" required="required"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Usuario"></asp:TextBox>
+            <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Usuario" required="required"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtSenha" runat="server" class="form-control" placeholder="Senha"></asp:TextBox>
+            <asp:TextBox ID="txtSenha" runat="server" class="form-control" placeholder="Senha" required="required"></asp:TextBox>
             <br />        
             <asp:Button ID="BtnEntrar" runat="server" Text="Salvar" class="btn btn-lg btn-primary btn-block" OnClick="BtnEntrar_Click"/>
             <br />

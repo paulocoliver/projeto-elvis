@@ -18,7 +18,7 @@ namespace Trabalho.WebView.Painel
             int idAssociacao = Int32.Parse(Session["AssociacaoID"].ToString());
 
             PaginaInicialBLL bll = new PaginaInicialBLL();
-            PaginaInicialType pagina = bll.select(idAssociacao);
+            PaginaInicialType pagina = bll.select(Master.getAssociacaoSession().IdAssociacao);
 
             if(IsPostBack){
                 pagina.Texto = Request.Form["texto"].ToString();

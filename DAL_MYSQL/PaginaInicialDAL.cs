@@ -36,26 +36,30 @@ namespace Trabalho.DAL_MYSQL
         public void save(PaginaInicialType pagina)
         {
             if(!(pagina.IdPaginaInicial > 0)){
-                pagina.IdPaginaInicial = insert(pagina.IdAssociacao);
+                pagina.IdPaginaInicial = insert(pagina);
             }
             update(pagina);
         }
 
-        private int insert(int idAssociacao)
+        private int insert(PaginaInicialType pagina)
         {
             MySqlConnection con = new MySqlConnection(Dados.StringConexao);
             string SQL = "INSERT INTO pagina_inicial " +
                             "( " +
-                                 "id_associacao " +
+                                 "id_associacao, " +
+                                  "texto " +
                             ") " +
                          "VALUES " +
                           "( " +
-                                 "@id_associacao" +
+                                 "@id_associacao, " +
+                                 "@texto " +
                            ")";
 
             MySqlCommand cmd = new MySqlCommand(SQL, con);
 
-            cmd.Parameters.AddWithValue("@id_associacao", idAssociacao);
+            cmd.Parameters.AddWithValue("@id_associacao", pagina.IdAssociacao);
+            cmd.Parameters.AddWithValue("@texto", pagina.Texto);
+
             try
             {
                 con.Open();

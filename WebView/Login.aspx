@@ -13,9 +13,9 @@
         <form id="form1" runat="server" class="form-signin validateForm">
             <h2 class="form-signin-heading">Login Associação</h2>
         
-            <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Usuario"></asp:TextBox>
+            <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Usuario" required="required"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtSenha" runat="server" class="form-control" placeholder="Senha" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtSenha" runat="server" class="form-control" placeholder="Senha" TextMode="Password" required="required"></asp:TextBox>
             <br />        
             <asp:Button ID="BtnEntrar" runat="server" Text="Entrar" class="btn btn-lg btn-primary btn-block" OnClick="BtnEntrar_Click"/>
             <br />

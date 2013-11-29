@@ -54,7 +54,7 @@ namespace Trabalho.WebView.Painel
                 EventoBLL bll = new EventoBLL();
                 string descricao = Request.Form["descricao"].ToString();
 
-                _evento.idAssociacao = _idAssociacao;
+                _evento.idAssociacao = Master.getAssociacaoSession().IdAssociacao;
                 _evento.Local = txtLocal.Text;
                 _evento.Titulo = txtTitulo.Text;
                 _evento.dataIni = txtDataInicio.Text;
